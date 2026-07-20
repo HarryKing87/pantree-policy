@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Pantry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FAF7F0;
+    --paper-card: #FFFFFF;
+    --ink: #2B2A25;
+    --ink-soft: #5B5A52;
+    --pine: #2F5233;
+    --pine-light: #4A7A50;
+    --clay: #C97B4A;
+    --line: #E4DFD1;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .top-bar {
+    background: var(--pine);
+    color: #F2EFE4;
+    padding: 14px 24px;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top-bar .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--clay);
+    display: inline-block;
+  }
+
+  header.hero {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px 32px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    color: var(--pine-light);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  h1.title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    margin: 0 0 14px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    color: var(--ink-soft);
+    font-size: 17px;
+    max-width: 56ch;
+  }
+
+  .updated-pill {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 6px 14px;
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px 24px 100px;
+  }
+
+  .intro-card {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--pine);
+    border-radius: 10px;
+    padding: 24px 26px;
+    margin-bottom: 44px;
+    font-size: 16px;
+    color: var(--ink);
+  }
+
+  section.jar {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  section.jar:last-of-type {
+    border-bottom: none;
+  }
+
+  .jar-label {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .jar-number {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--pine);
+    border-radius: 6px;
+    padding: 3px 10px;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+  }
+
+  h2.jar-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .jar-body {
+    padding-left: 46px;
+    color: var(--ink-soft);
+    font-size: 16px;
+  }
+
+  .jar-body p { margin: 0 0 14px; }
+  .jar-body p:last-child { margin-bottom: 0; }
+
+  .jar-body strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .jar-body ul {
+    margin: 0 0 14px;
+    padding-left: 20px;
+  }
+  .jar-body li { margin-bottom: 8px; }
+
+  .contact-card {
+    margin-top: 8px;
+    background: #EFF3EC;
+    border: 1px solid #D3E0CE;
+    border-radius: 10px;
+    padding: 20px 24px;
+    font-size: 15px;
+  }
+
+  .contact-card a {
+    color: var(--pine);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--pine-light);
+  }
+  .contact-card a:hover { color: var(--pine-light); }
+
+  footer {
+    text-align: center;
+    padding: 40px 24px 60px;
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+
+  @media (max-width: 520px) {
+    .jar-body { padding-left: 0; margin-top: 8px; }
+    .jar-label { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar"><span class="dot"></span>Pantry</div>
+
+<header class="hero">
+  <div class="eyebrow">Legal · Data & Privacy</div>
+  <h1 class="title">Privacy Policy</h1>
+  <p class="subtitle">How Pantry collects, uses, and protects your information — written plainly so you always know what's on the shelf.</p>
+  <span class="updated-pill">Last updated 20 February 2025</span>
+</header>
+
+<main>
+
+  <div class="intro-card">
+    Welcome to Pantry! Your privacy is important to us. This policy explains how we collect, use, disclose, and protect your personal information when you use our app. By using Pantry, you agree to the practices described below.
+  </div>
+
+  <section class="jar">
+    <div class="jar-label">
+      <span class="jar-number">01</span>
+      <h2 class="jar-title">Information We Collect</h2>
+    </div>
+    <div class="jar-body">
+      <p>We collect the following types of information:</p>
+      <ul>
+        <li><strong>Personal information</strong> — when you create an account, we may collect your name, email address, and other necessary details.</li>
+        <li><strong>Nutrition & health data</strong> — if you log meals or receive dietary recommendations, we may collect data related to your preferences, goals, and health.</li>
+        <li><strong>Pantry data</strong> — information about the food items you store in your virtual pantry, including expiry dates.</li>
+        <li><strong>Usage information</strong> — data on how you interact with the app, such as features used and time spent.</li>
+        <li><strong>Device information</strong> — data related to your device, operating system, and IP address, for security and optimization.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="jar">
+    <div class="jar-label">
+      <span class="jar-number">02</span>
+      <h2 class="jar-title">How We Use Your Information</h2>
+    </div>
+    <div class="jar-body">
+      <p>We use your information to:</p>
+      <ul>
+        <li>Provide and improve Pantry's features, including AI-powered meal planning and dietary recommendations.</li>
+        <li>Offer personalized nutrition insights and pantry management.</li>
+        <li>Connect you with real-life nutritionists, if applicable.</li>
+        <li>Enhance user experience and troubleshoot technical issues.</li>
+        <li>Comply with legal obligations.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="jar">
+    <div class="jar-label">
+      <span class="jar-number">03</span>
+      <h2 class="jar-title">Sharing Your Information</h2>
+    </div>
+    <div class="jar-body">
+      <p>We do not sell your personal data. However, we may share it with:</p>
+      <ul>
+        <li><strong>Nutritionists & experts</strong> — if you opt for professional consultations.</li>
+        <li><strong>Third-party service providers</strong> — to facilitate app functionalities like data storage and analytics.</li>
+        <li><strong>Legal authorities</strong> — when required by law or to protect against fraudulent activity.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="jar">
+    <div class="jar-label">
+      <span class="jar-number">04</span>
+      <h2 class="jar-title">Data Security</h2>
+    </div>
+    <div class="jar-body">
+      <p>We take reasonable measures to protect your data from unauthorized access, loss, or misuse. However, no digital system is completely secure.</p>
+    </div>
+  </section>
+
+  <section class="jar">
+    <div class="jar-label">
+      <span class="jar-number">05</span>
+      <h2 class="jar-title">Your Rights & Choices</h2>
+    </div>
+    <div class="jar-body">
+      <p>You can:</p>
+      <ul>
+        <li>Access, update, or delete your personal data.</li>
+        <li>Opt out of certain data collection practices.</li>
+      </ul>
+      <div class="contact-card">
+        Questions or requests about your data? Reach us at <a href="mailto:info@pantryapp.com">info@pantryapp.com</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="jar">
+    <div class="jar-label">
+      <span class="jar-number">06</span>
+      <h2 class="jar-title">Changes to This Policy</h2>
+    </div>
+    <div class="jar-body">
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted in the app, and continued use of Pantry means you accept the revised policy.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 Pantry. All rights reserved.
+</footer>
+
+</body>
+</html>
