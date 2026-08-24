@@ -3,320 +3,461 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Pantry</title>
+<title>Mål — Plan meals, waste less</title>
+<meta name="description" content="Mål helps you plan meals around what you already have. Track your kitchen, hit your nutrition goals, and throw less away.">
+<meta name="theme-color" content="#1F3D2B">
+
+<meta property="og:title" content="Mål — Plan meals, waste less">
+<meta property="og:description" content="Plan meals around what you already have. Track your kitchen, hit your goals, throw less away.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://harryking87.github.io/pantree-policy/">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/favicon.svg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #FAF7F0;
-    --paper-card: #FFFFFF;
-    --ink: #2B2A25;
-    --ink-soft: #5B5A52;
-    --pine: #2F5233;
-    --pine-light: #4A7A50;
-    --clay: #C97B4A;
-    --line: #E4DFD1;
-  }
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  * { box-sizing: border-box; }
+<link rel="stylesheet" href="assets/css/styles.css">
 
-  html { scroll-behavior: smooth; }
-
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .top-bar {
-    background: var(--pine);
-    color: #F2EFE4;
-    padding: 14px 24px;
-    font-size: 14px;
-    letter-spacing: 0.04em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .top-bar .dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--clay);
-    display: inline-block;
-  }
-
-  header.hero {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 64px 24px 32px;
-  }
-
-  .eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 12px;
-    color: var(--pine-light);
-    font-weight: 600;
-    margin-bottom: 14px;
-  }
-
-  h1.title {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    font-weight: 600;
-    margin: 0 0 14px;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-
-  .subtitle {
-    color: var(--ink-soft);
-    font-size: 17px;
-    max-width: 56ch;
-  }
-
-  .updated-pill {
-    display: inline-block;
-    margin-top: 22px;
-    padding: 6px 14px;
-    background: var(--paper-card);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    font-size: 13px;
-    color: var(--ink-soft);
-  }
-
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 16px 24px 100px;
-  }
-
-  .intro-card {
-    background: var(--paper-card);
-    border: 1px solid var(--line);
-    border-left: 4px solid var(--pine);
-    border-radius: 10px;
-    padding: 24px 26px;
-    margin-bottom: 44px;
-    font-size: 16px;
-    color: var(--ink);
-  }
-
-  section.jar {
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  section.jar:last-of-type {
-    border-bottom: none;
-  }
-
-  .jar-label {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    margin-bottom: 14px;
-  }
-
-  .jar-number {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
-    background: var(--pine);
-    border-radius: 6px;
-    padding: 3px 10px;
-    letter-spacing: 0.02em;
-    flex-shrink: 0;
-  }
-
-  h2.jar-title {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 0;
-    color: var(--ink);
-  }
-
-  .jar-body {
-    padding-left: 46px;
-    color: var(--ink-soft);
-    font-size: 16px;
-  }
-
-  .jar-body p { margin: 0 0 14px; }
-  .jar-body p:last-child { margin-bottom: 0; }
-
-  .jar-body strong {
-    color: var(--ink);
-    font-weight: 600;
-  }
-
-  .jar-body ul {
-    margin: 0 0 14px;
-    padding-left: 20px;
-  }
-  .jar-body li { margin-bottom: 8px; }
-
-  .contact-card {
-    margin-top: 8px;
-    background: #EFF3EC;
-    border: 1px solid #D3E0CE;
-    border-radius: 10px;
-    padding: 20px 24px;
-    font-size: 15px;
-  }
-
-  .contact-card a {
-    color: var(--pine);
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--pine-light);
-  }
-  .contact-card a:hover { color: var(--pine-light); }
-
-  footer {
-    text-align: center;
-    padding: 40px 24px 60px;
-    color: var(--ink-soft);
-    font-size: 13px;
-  }
-
-  @media (max-width: 520px) {
-    .jar-body { padding-left: 0; margin-top: 8px; }
-    .jar-label { flex-wrap: wrap; }
-  }
-</style>
+<!-- Apply the saved theme before first paint, otherwise anyone who has
+     toggled to dark sees a flash of the light theme on every load.
+     Must stay inline and blocking, and must stay above the stylesheet's
+     first use. Colour transitions stay off until after load (see .theme-anim). -->
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('mal-theme');
+      if (t === 'dark' || t === 'light') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    } catch (e) { /* storage blocked — fall through to the OS preference */ }
+  })();
+</script>
 </head>
 <body>
 
-<div class="top-bar"><span class="dot"></span>Pantry</div>
+<a class="skip-link" href="#view-root">Skip to content</a>
 
-<header class="hero">
-  <div class="eyebrow">Legal · Data & Privacy</div>
-  <h1 class="title">Privacy Policy</h1>
-  <p class="subtitle">How Pantry collects, uses, and protects your information — written plainly so you always know what's on the shelf.</p>
-  <span class="updated-pill">Last updated 20 February 2025</span>
+<!-- ══════════════════════ TOP BAR ══════════════════════ -->
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+
+    <a class="wordmark" href="#/" data-link="home" aria-label="Mål — home">
+      <span class="wordmark-leaf" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <defs>
+            <linearGradient id="wm-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%"   stop-color="#55B884"/>
+              <stop offset="52%"  stop-color="#9AC540"/>
+              <stop offset="100%" stop-color="#E0963B"/>
+            </linearGradient>
+          </defs>
+          <path d="M38,44 C100,46 152,90 154,142 C96,146 44,104 38,44 Z" fill="url(#wm-grad)"/>
+          <path d="M44,52 C82,90 120,120 150,139" fill="none" stroke="#EAF3EC" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+          <path d="M154,142 C173,159 177,180 169,197" fill="none" stroke="#C8612A" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="wordmark-text">Mål<span class="wordmark-dot">.</span></span>
+    </a>
+
+    <nav class="tabs" id="tabs" aria-label="Sections">
+      <span class="tab-pill" id="tab-pill" aria-hidden="true"></span>
+      <a class="tab" href="#/"        data-link="home"    role="tab">Home</a>
+      <a class="tab" href="#/privacy" data-link="privacy" role="tab">Privacy</a>
+      <a class="tab" href="#/delete"  data-link="delete"  role="tab">Delete&nbsp;account</a>
+    </nav>
+
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+      <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><path d="M12 2.6v2.6"/><path d="M12 18.8v2.6"/><path d="M2.6 12h2.6"/><path d="M18.8 12h2.6"/><path d="M5.4 5.4l1.8 1.8"/><path d="M16.8 16.8l1.8 1.8"/><path d="M18.6 5.4l-1.8 1.8"/><path d="M7.2 16.8l-1.8 1.8"/></g></svg>
+      <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 019.8 4a8.4 8.4 0 108.9 12.6"/></svg>
+    </button>
+
+  </div>
 </header>
 
-<main>
 
-  <div class="intro-card">
-    Welcome to Pantry! Your privacy is important to us. This policy explains how we collect, use, disclose, and protect your personal information when you use our app. By using Pantry, you agree to the practices described below.
+<main id="view-root">
+
+<!-- ══════════════════════ HOME ══════════════════════ -->
+<section class="view" data-view="home" aria-labelledby="home-h1">
+
+  <div class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow" data-stagger="1">Kitchen · Meals · Goals</p>
+      <h1 class="hero-title" id="home-h1" data-stagger="2">
+        Cook what you<br><em>already</em> have.
+      </h1>
+      <p class="hero-sub" data-stagger="3">
+        Mål keeps track of what's in your kitchen, plans meals around it,
+        and quietly makes sure less of it ends up in the bin.
+      </p>
+      <div class="hero-actions" data-stagger="4">
+        <a class="btn btn-primary" href="#/privacy" data-link="privacy">Read our privacy policy</a>
+        <a class="btn btn-ghost" href="#/delete" data-link="delete">Delete my account</a>
+      </div>
+    </div>
+
+    <div class="hero-leaf" data-stagger="5" aria-hidden="true">
+      <svg viewBox="0 0 240 240" class="leafmark" id="leafmark">
+        <defs>
+          <linearGradient id="leaf-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%"   stop-color="#55B884"/>
+            <stop offset="52%"  stop-color="#9AC540"/>
+            <stop offset="100%" stop-color="#E0963B"/>
+          </linearGradient>
+          <radialGradient id="leaf-glow" cx="50%" cy="45%" r="55%">
+            <stop offset="0%"   stop-color="#9AC540" stop-opacity=".30"/>
+            <stop offset="100%" stop-color="#9AC540" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <circle class="leaf-halo" cx="120" cy="112" r="104" fill="url(#leaf-glow)"/>
+
+        <g class="leaf-body">
+          <path class="leaf-blade"
+                d="M46,52 C118,55 182,107 184,170 C114,175 53,124 46,52 Z"
+                fill="url(#leaf-grad)"/>
+
+          <!-- Midrib + veins, drawn in on load.
+               pathLength="1" normalises every path to a length of 1 so one
+               dash rule draws them all evenly regardless of real geometry.
+               Delays are explicit (--d) — :nth-of-type would count the blade
+               and stem paths too and shift the whole sequence. -->
+          <path class="vein vein-main" pathLength="1" style="--d:.42s" d="M53,61 C98,107 144,143 180,166"/>
+          <path class="vein" pathLength="1" style="--d:.72s" d="M78,86 C86,79 96,76 104,78"/>
+          <path class="vein" pathLength="1" style="--d:.82s" d="M100,109 C110,100 122,96 132,98"/>
+          <path class="vein" pathLength="1" style="--d:.92s" d="M124,131 C133,122 145,118 155,120"/>
+          <path class="vein" pathLength="1" style="--d:1.00s" d="M88,96 C84,106 84,116 88,124"/>
+          <path class="vein" pathLength="1" style="--d:1.08s" d="M112,120 C108,130 108,140 112,148"/>
+
+          <path class="leaf-stem" pathLength="1" d="M184,170 C206,190 211,214 201,236"/>
+          <circle class="leaf-dot" cx="226" cy="228" r="6"/>
+        </g>
+      </svg>
+    </div>
   </div>
 
-  <section class="jar">
-    <div class="jar-label">
-      <span class="jar-number">01</span>
-      <h2 class="jar-title">Information We Collect</h2>
-    </div>
-    <div class="jar-body">
-      <p>We collect the following types of information:</p>
-      <ul>
-        <li><strong>Personal information</strong> — when you create an account, we may collect your name, email address, and other necessary details.</li>
-        <li><strong>Nutrition & health data</strong> — if you log meals or receive dietary recommendations, we may collect data related to your preferences, goals, and health.</li>
-        <li><strong>Pantry data</strong> — information about the food items you store in your virtual pantry, including expiry dates.</li>
-        <li><strong>Usage information</strong> — data on how you interact with the app, such as features used and time spent.</li>
-        <li><strong>Device information</strong> — data related to your device, operating system, and IP address, for security and optimization.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- ─────────── what it does ─────────── -->
+  <div class="section">
+    <h2 class="sec-title reveal">Three things, done well.</h2>
 
-  <section class="jar">
-    <div class="jar-label">
-      <span class="jar-number">02</span>
-      <h2 class="jar-title">How We Use Your Information</h2>
-    </div>
-    <div class="jar-body">
-      <p>We use your information to:</p>
-      <ul>
-        <li>Provide and improve Pantry's features, including AI-powered meal planning and dietary recommendations.</li>
-        <li>Offer personalized nutrition insights and pantry management.</li>
-        <li>Connect you with real-life nutritionists, if applicable.</li>
-        <li>Enhance user experience and troubleshoot technical issues.</li>
-        <li>Comply with legal obligations.</li>
-      </ul>
-    </div>
-  </section>
+    <div class="cards">
+      <article class="card reveal">
+        <span class="card-ico ico-jar" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M11 4h10M10.5 8h11a2 2 0 012 2v14a4 4 0 01-4 4h-8a4 4 0 01-4-4V10a2 2 0 012-2Z"/><path d="M8.5 17h15"/></svg>
+        </span>
+        <h3>Know what you have</h3>
+        <p>Add food once and Mål tracks quantity, unit and expiry — so nothing hides at the back of the fridge until it's too late.</p>
+      </article>
 
-  <section class="jar">
-    <div class="jar-label">
-      <span class="jar-number">03</span>
-      <h2 class="jar-title">Sharing Your Information</h2>
-    </div>
-    <div class="jar-body">
-      <p>We do not sell your personal data. However, we may share it with:</p>
-      <ul>
-        <li><strong>Nutritionists & experts</strong> — if you opt for professional consultations.</li>
-        <li><strong>Third-party service providers</strong> — to facilitate app functionalities like data storage and analytics.</li>
-        <li><strong>Legal authorities</strong> — when required by law or to protect against fraudulent activity.</li>
-      </ul>
-    </div>
-  </section>
+      <article class="card reveal">
+        <span class="card-ico ico-plan" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><rect x="4.5" y="6.5" width="23" height="21" rx="3.5"/><path d="M4.5 13h23M11 3.5V8M21 3.5V8"/><path d="M11 19h3M18 19h3M11 23h3"/></svg>
+        </span>
+        <h3>Plan meals that fit</h3>
+        <p>Daily plans built from your real ingredients and your real targets. Cook a meal and your kitchen count updates itself.</p>
+      </article>
 
-  <section class="jar">
-    <div class="jar-label">
-      <span class="jar-number">04</span>
-      <h2 class="jar-title">Data Security</h2>
+      <article class="card reveal">
+        <span class="card-ico ico-goal" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M4 25.5c4-1 5.5-6 9-6s4 5.5 7.5 5.5 4.5-4 7.5-8"/><circle cx="24" cy="9" r="3"/><path d="M4 28.5h24"/></svg>
+        </span>
+        <h3>See the whole picture</h3>
+        <p>Calories, carbs, protein and fat tracked across the week — shown as progress you can actually read at a glance.</p>
+      </article>
     </div>
-    <div class="jar-body">
-      <p>We take reasonable measures to protect your data from unauthorized access, loss, or misuse. However, no digital system is completely secure.</p>
-    </div>
-  </section>
+  </div>
 
-  <section class="jar">
-    <div class="jar-label">
-      <span class="jar-number">05</span>
-      <h2 class="jar-title">Your Rights & Choices</h2>
+  <!-- ─────────── screens ─────────── -->
+  <div class="section section-screens">
+    <h2 class="sec-title reveal">A look inside.</h2>
+    <p class="sec-sub reveal">Light or dark — Mål follows your phone.</p>
+
+    <div class="phones">
+
+      <!-- phone 1 : dashboard -->
+      <div class="phone phone-a reveal" aria-hidden="true">
+        <div class="phone-screen">
+          <div class="ph-greet"><span class="ph-avatar"></span><div><span class="ph-hi">Hi! 👋</span><strong>Jane</strong></div></div>
+
+          <div class="ph-cal">
+            <div class="ph-cal-month">August 2026</div>
+            <div class="ph-cal-days">
+              <span class="on"><i>Mon</i><b>24</b><u></u></span>
+              <span><i>Tue</i><b>25</b><u></u></span>
+              <span><i>Wed</i><b>26</b></span>
+              <span><i>Thu</i><b>27</b><u></u></span>
+              <span><i>Fri</i><b>28</b></span>
+              <span><i>Sat</i><b>29</b></span>
+            </div>
+            <div class="ph-cal-btns"><span class="ph-fab">🛒</span><span class="ph-fab">＋</span></div>
+          </div>
+
+          <div class="ph-card">
+            <div class="ph-card-head"><strong>Calories</strong><span>This month</span></div>
+            <div class="ph-cal-total">16,185 Cal</div>
+            <div class="ph-spark">
+              <i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:26%"></i>
+              <i style="--h:34%"></i><i style="--h:30%"></i><i style="--h:88%"></i><i style="--h:56%"></i>
+              <i style="--h:48%"></i><i style="--h:100%"></i><i style="--h:70%"></i><i style="--h:58%"></i>
+              <i style="--h:76%"></i><i style="--h:46%"></i><i style="--h:62%"></i><i style="--h:40%"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- phone 2 : meal plan (dark) -->
+      <div class="phone phone-b is-dark reveal" aria-hidden="true">
+        <div class="phone-screen">
+          <div class="ph-sheet-head"><strong>Today's Meal plan</strong><span class="ph-ring">25</span></div>
+
+          <span class="ph-meal-n">Meal 1.</span>
+          <div class="ph-meal">
+            <div class="ph-kcal">410 kcal</div>
+            <div class="ph-meal-name">Mediterranean Feta &amp; Spinach Omelet</div>
+            <div class="ph-chips"><em class="p">Protein 24g</em><em class="c">Carbs 4g</em><em class="f">Fat 33g</em></div>
+            <p>1 omelet made with 3 eggs, spinach and feta</p>
+          </div>
+
+          <span class="ph-meal-n">Meal 2.</span>
+          <div class="ph-meal">
+            <span class="ph-tick">✓</span>
+            <div class="ph-kcal">480 kcal</div>
+            <div class="ph-meal-name">Greek Style Chicken Salad</div>
+            <div class="ph-chips"><em class="p">Protein 42g</em><em class="c">Carbs 6g</em><em class="f">Fat 32g</em></div>
+            <p>1 salad bowl with grilled chicken and olive oil</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- phone 3 : insights -->
+      <div class="phone phone-c reveal" aria-hidden="true">
+        <div class="phone-screen">
+          <div class="ph-sheet-head"><strong>Your Insights</strong><span class="ph-x">✕</span></div>
+
+          <div class="ph-tiles">
+            <div class="ph-tile warm"><span>Weekly Calories</span><b data-count="14858">14858</b><i>kcal</i></div>
+            <div class="ph-tile cool"><span>Carbs Goal</span><b data-count="1857">1857</b><i>g</i></div>
+            <div class="ph-tile cool"><span>Protein Goal</span><b data-count="743">743</b><i>g</i></div>
+            <div class="ph-tile warm"><span>Fat Goal</span><b data-count="495">495</b><i>g</i></div>
+          </div>
+
+          <div class="ph-card">
+            <strong class="ph-gp-title">Goal Progress</strong>
+            <div class="ph-bar"><span>Monthly Calories</span><b>60%</b><u class="warm" style="--w:60%"></u></div>
+            <div class="ph-bar"><span>Weekly Carbs</span><b>1%</b><u class="cool" style="--w:1%"></u></div>
+            <div class="ph-bar"><span>Weekly Protein</span><b>19%</b><u class="cool" style="--w:19%"></u></div>
+            <div class="ph-bar"><span>Weekly Fat</span><b>28%</b><u class="warm" style="--w:28%"></u></div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="jar-body">
-      <p>You can:</p>
-      <ul>
-        <li>Access, update, or delete your personal data.</li>
-        <li>Opt out of certain data collection practices.</li>
-      </ul>
-      <div class="contact-card">
-        Questions or requests about your data? Reach us at <a href="mailto:info@pantryapp.com">info@pantryapp.com</a>
+  </div>
+
+  <!-- ─────────── closing note ─────────── -->
+  <div class="section">
+    <div class="note reveal">
+      <h2>Your data stays yours.</h2>
+      <p>We don't sell personal data — not to advertisers, not to anyone. You can read exactly what we collect and why, and you can ask us to delete all of it whenever you like.</p>
+      <div class="note-actions">
+        <a class="btn btn-primary" href="#/privacy" data-link="privacy">Privacy policy</a>
+        <a class="btn btn-ghost" href="#/delete" data-link="delete">Request deletion</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="jar" id="delete-account">
-    <div class="jar-label">
-      <span class="jar-number">06</span>
-      <h2 class="jar-title">Request Account Deletion</h2>
+</section>
+
+
+<!-- ══════════════════════ PRIVACY ══════════════════════ -->
+<section class="view" data-view="privacy" aria-labelledby="privacy-h1" hidden>
+
+  <div class="doc-hero">
+    <p class="eyebrow">Legal · Data &amp; Privacy</p>
+    <h1 class="doc-title" id="privacy-h1">Privacy Policy</h1>
+    <p class="doc-sub">How Mål collects, uses, and protects your information — written plainly so you always know what's on the shelf.</p>
+    <span class="pill">Last updated 20 February 2025</span>
+  </div>
+
+  <div class="doc">
+
+    <div class="intro-card">
+      Welcome to Mål! Your privacy is important to us. This policy explains how we collect, use, disclose, and protect your personal information when you use our app. By using Mål, you agree to the practices described below.
     </div>
-    <div class="jar-body">
-      <p>You can request the deletion of your Pantry account and associated personal data at any time. Once we receive your request, we will delete your account information, including your profile details, pantry contents, and nutrition data, within 30 days, except where we are required to retain certain data for legal or regulatory purposes.</p>
-      <p>To request deletion, send an email with the subject line <strong>"Account Deletion Request"</strong> from the email address associated with your account.</p>
-      <div class="contact-card">
-        Request deletion by emailing <a href="mailto:info@pantryapp.com?subject=Account%20Deletion%20Request">info@pantryapp.com</a>
+
+    <section class="jar reveal">
+      <div class="jar-label"><span class="jar-number">01</span><h2 class="jar-title">Information We Collect</h2></div>
+      <div class="jar-body">
+        <p>We collect the following types of information:</p>
+        <ul>
+          <li><strong>Personal information</strong> — when you create an account, we may collect your name, email address, and other necessary details.</li>
+          <li><strong>Nutrition &amp; health data</strong> — if you log meals or receive dietary recommendations, we may collect data related to your preferences, goals, and health.</li>
+          <li><strong>Pantry data</strong> — information about the food items you store in your virtual pantry, including expiry dates.</li>
+          <li><strong>Usage information</strong> — data on how you interact with the app, such as features used and time spent.</li>
+          <li><strong>Device information</strong> — data related to your device, operating system, and IP address, for security and optimization.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="jar reveal">
+      <div class="jar-label"><span class="jar-number">02</span><h2 class="jar-title">How We Use Your Information</h2></div>
+      <div class="jar-body">
+        <p>We use your information to:</p>
+        <ul>
+          <li>Provide and improve Mål's features, including AI-powered meal planning and dietary recommendations.</li>
+          <li>Offer personalized nutrition insights and pantry management.</li>
+          <li>Connect you with real-life nutritionists, if applicable.</li>
+          <li>Enhance user experience and troubleshoot technical issues.</li>
+          <li>Comply with legal obligations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="jar reveal">
+      <div class="jar-label"><span class="jar-number">03</span><h2 class="jar-title">Sharing Your Information</h2></div>
+      <div class="jar-body">
+        <p>We do not sell your personal data. However, we may share it with:</p>
+        <ul>
+          <li><strong>Nutritionists &amp; experts</strong> — if you opt for professional consultations.</li>
+          <li><strong>Third-party service providers</strong> — to facilitate app functionalities like data storage and analytics.</li>
+          <li><strong>Legal authorities</strong> — when required by law or to protect against fraudulent activity.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="jar reveal">
+      <div class="jar-label"><span class="jar-number">04</span><h2 class="jar-title">Data Security</h2></div>
+      <div class="jar-body">
+        <p>We take reasonable measures to protect your data from unauthorized access, loss, or misuse. However, no digital system is completely secure.</p>
+      </div>
+    </section>
+
+    <section class="jar reveal">
+      <div class="jar-label"><span class="jar-number">05</span><h2 class="jar-title">Your Rights &amp; Choices</h2></div>
+      <div class="jar-body">
+        <p>You can:</p>
+        <ul>
+          <li>Access, update, or delete your personal data.</li>
+          <li>Opt out of certain data collection practices.</li>
+        </ul>
+        <div class="contact-card">
+          Questions or requests about your data? Reach us at <a href="mailto:info@pantryapp.com" data-contact-email>info@pantryapp.com</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="jar reveal" id="delete-account">
+      <div class="jar-label"><span class="jar-number">06</span><h2 class="jar-title">Request Account Deletion</h2></div>
+      <div class="jar-body">
+        <p>You can request the deletion of your Mål account and associated personal data at any time. Once we receive your request, we will delete your account information, including your profile details, pantry contents, and nutrition data, within 30 days, except where we are required to retain certain data for legal or regulatory purposes.</p>
+        <p>To request deletion, send an email with the subject line <strong>"Account Deletion Request"</strong> from the email address associated with your account.</p>
+        <div class="contact-card">
+          Request deletion by emailing <a href="mailto:info@pantryapp.com?subject=Account%20Deletion%20Request" data-contact-email>info@pantryapp.com</a>
+          <a class="contact-more" href="#/delete" data-link="delete">See the full deletion steps →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="jar reveal">
+      <div class="jar-label"><span class="jar-number">07</span><h2 class="jar-title">Changes to This Policy</h2></div>
+      <div class="jar-body">
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted in the app, and continued use of Mål means you accept the revised policy.</p>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════ DELETE ACCOUNT ══════════════════════ -->
+<section class="view" data-view="delete" aria-labelledby="delete-h1" hidden>
+
+  <div class="doc-hero">
+    <p class="eyebrow">Your data · Your call</p>
+    <h1 class="doc-title" id="delete-h1">Delete your account</h1>
+    <p class="doc-sub">You can ask us to erase your Mål account and everything attached to it. Here's exactly how, and exactly what happens next.</p>
+  </div>
+
+  <div class="doc">
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step-n">1</span>
+        <div>
+          <h3>Email us from your account address</h3>
+          <p>Send the request from the same email address you signed up with — that's how we confirm the account is yours.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">2</span>
+        <div>
+          <h3>Use the subject line “Account Deletion Request”</h3>
+          <p>It routes your message straight to the right place, so nothing sits in a queue.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">3</span>
+        <div>
+          <h3>We erase it within 30 days</h3>
+          <p>Your profile details, pantry contents and nutrition data are removed — except anything we're legally required to keep.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="cta-card reveal">
+      <div>
+        <strong>Ready when you are</strong>
+        <p>This opens your mail app with the subject already filled in.</p>
+      </div>
+      <a class="btn btn-primary" href="mailto:info@pantryapp.com?subject=Account%20Deletion%20Request" data-contact-email>Email deletion request</a>
+    </div>
+
+    <div class="what-goes">
+      <div class="goes-col reveal">
+        <h3><span class="goes-ico del">✕</span> What gets deleted</h3>
+        <ul>
+          <li>Your profile details</li>
+          <li>Your pantry contents</li>
+          <li>Your nutrition and goal data</li>
+          <li>Your meal plans and history</li>
+        </ul>
+      </div>
+      <div class="goes-col reveal">
+        <h3><span class="goes-ico keep">!</span> What we may keep</h3>
+        <ul>
+          <li>Records we're required to retain for legal or regulatory purposes</li>
+        </ul>
+        <p class="goes-note">Everything else goes, within 30 days of your request.</p>
       </div>
     </div>
-  </section>
 
-  <section class="jar">
-    <div class="jar-label">
-      <span class="jar-number">07</span>
-      <h2 class="jar-title">Changes to This Policy</h2>
-    </div>
-    <div class="jar-body">
-      <p>We may update this Privacy Policy from time to time. Any changes will be posted in the app, and continued use of Pantry means you accept the revised policy.</p>
-    </div>
-  </section>
+    <p class="doc-foot-link">
+      This mirrors <a href="#/privacy" data-link="privacy">section 06 of our privacy policy</a>.
+    </p>
+
+  </div>
+</section>
 
 </main>
 
-<footer>
-  © 2025 Pantry. All rights reserved.
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="site-foot">
+  <div class="foot-inner">
+    <span class="foot-mark">Mål<span class="wordmark-dot">.</span></span>
+    <nav class="foot-nav">
+      <a href="#/" data-link="home">Home</a>
+      <a href="#/privacy" data-link="privacy">Privacy</a>
+      <a href="#/delete" data-link="delete">Delete account</a>
+      <a href="mailto:info@pantryapp.com" data-contact-email>Contact</a>
+    </nav>
+    <span class="foot-copy">&copy; <span id="year">2026</span> Mål. All rights reserved.</span>
+  </div>
 </footer>
 
+<script src="assets/js/app.js"></script>
 </body>
 </html>

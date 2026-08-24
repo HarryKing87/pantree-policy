@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harryking87.github.io/pantree-policy/sitemap.xml
