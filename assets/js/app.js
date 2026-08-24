@@ -8,17 +8,20 @@
 (function () {
   'use strict';
 
-  var VIEWS   = ['home', 'privacy', 'delete'];
+  var VIEWS   = ['home', 'terms', 'privacy', 'delete'];
   var DEFAULT = 'home';
 
   /* Legacy anchors that existed on the old single-page policy.
      They must keep working forever — external listings point at them. */
   var LEGACY = {
-    'delete-account':          'delete',
-    'delete_account':          'delete',
-    'privacy':                 'privacy',
-    'privacy-policy':          'privacy',
-    'request-account-deletion':'delete'
+    'delete-account':           'delete',
+    'delete_account':           'delete',
+    'privacy':                  'privacy',
+    'privacy-policy':           'privacy',
+    'request-account-deletion': 'delete',
+    'terms':                    'terms',
+    'terms-and-conditions':     'terms',
+    'tos':                      'terms'
   };
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -109,6 +112,7 @@
   }
 
   function titleFor(name) {
+    if (name === 'terms')   return 'Terms & Conditions — Mål';
     if (name === 'privacy') return 'Privacy Policy — Mål';
     if (name === 'delete')  return 'Delete your account — Mål';
     return 'Mål — Plan meals, waste less';
