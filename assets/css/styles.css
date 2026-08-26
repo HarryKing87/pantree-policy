@@ -924,3 +924,90 @@ a { color: var(--accent); }
   .ph-spark i { transform: scaleY(1); }
   .ph-bar u::after { transform: scaleX(1); }
 }
+
+/* ═══════════════ release notes ═══════════════ */
+.rn-release { margin-bottom: 64px; }
+.rn-release:last-child { margin-bottom: 0; }
+
+.rn-release-head { margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+
+.rn-stamp { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+
+.rn-date {
+  font-size: .82rem; font-weight: 600;
+  color: var(--ink-faint); letter-spacing: .04em;
+}
+
+.rn-badge {
+  display: inline-flex; align-items: center;
+  height: 20px; padding: 0 9px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border: 1px solid var(--accent-line);
+  border-radius: 999px;
+  font-size: .69rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .07em;
+}
+
+.rn-headline {
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.rn-blurb {
+  color: var(--ink-soft);
+  margin: 0;
+  font-size: .97rem;
+}
+
+.rn-items { display: flex; flex-direction: column; }
+
+.rn-item {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 0 12px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.rn-item:last-child { border-bottom: none; }
+
+.rn-ico {
+  font-size: 19px;
+  line-height: 1.55;
+  text-align: center;
+  padding-top: 1px;
+}
+
+.rn-item-label {
+  font-size: .95rem; font-weight: 600;
+  color: var(--ink); line-height: 1.4;
+  margin-bottom: 4px;
+  font-family: var(--font-display);
+}
+
+.rn-item-desc {
+  font-size: .9rem; color: var(--ink-soft); line-height: 1.6;
+}
+
+.rn-item-desc strong { color: var(--ink); font-weight: 600; }
+
+.rn-bug {
+  display: inline-block;
+  font-size: .67rem; font-weight: 700;
+  letter-spacing: .05em; text-transform: uppercase;
+  color: var(--terracotta);
+  background: color-mix(in srgb, var(--terracotta) 12%, transparent);
+  padding: 1px 6px; border-radius: 5px;
+  margin-left: 5px; vertical-align: middle;
+  font-family: var(--font-body);
+}
+
+/* ─── theme-anim additions ─── */
+.theme-anim .rn-release-head,
+.theme-anim .rn-item,
+.theme-anim .rn-badge {
+  transition: background-color .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease);
+}

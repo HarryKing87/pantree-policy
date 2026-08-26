@@ -64,10 +64,11 @@
 
     <nav class="tabs" id="tabs" aria-label="Sections">
       <span class="tab-pill" id="tab-pill" aria-hidden="true"></span>
-      <a class="tab" href="#/"        data-link="home"    role="tab">Home</a>
-      <a class="tab" href="#/terms"   data-link="terms"   role="tab">Terms</a>
-      <a class="tab" href="#/privacy" data-link="privacy" role="tab">Privacy</a>
-      <a class="tab" href="#/delete"  data-link="delete"  role="tab">Delete&nbsp;account</a>
+      <a class="tab" href="#/"        data-link="home"     role="tab">Home</a>
+      <a class="tab" href="#/terms"   data-link="terms"    role="tab">Terms</a>
+      <a class="tab" href="#/privacy" data-link="privacy"  role="tab">Privacy</a>
+      <a class="tab" href="#/delete"  data-link="delete"   role="tab">Delete&nbsp;account</a>
+      <a class="tab" href="#/releases" data-link="releases" role="tab">What&#8217;s&nbsp;new</a>
     </nav>
 
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
@@ -669,6 +670,110 @@
   </div>
 </section>
 
+
+<!-- ══════════════════════ RELEASE NOTES ══════════════════════ -->
+<section class="view" data-view="releases" aria-labelledby="releases-h1" hidden>
+
+  <div class="doc-hero">
+    <p class="eyebrow">Updates · What changed</p>
+    <h1 class="doc-title" id="releases-h1">Release Notes</h1>
+    <p class="doc-sub">Every update to Mål, explained plainly — what changed and why it matters.</p>
+  </div>
+
+  <div class="doc">
+
+    <!-- ── Aug 26, 2026 ── -->
+    <div class="rn-release reveal">
+      <div class="rn-release-head">
+        <div class="rn-stamp">
+          <span class="rn-date">Aug 26, 2026</span>
+          <span class="rn-badge">Freshness Drop</span>
+        </div>
+        <h2 class="rn-headline">The grid finally shows up.</h2>
+        <p class="rn-blurb">A bag of fixes, icon surgery, and some serious modal glow-ups. ✌️</p>
+      </div>
+
+      <div class="rn-items">
+
+        <div class="rn-item reveal">
+          <div class="rn-ico" aria-hidden="true">📦</div>
+          <div class="rn-body">
+            <div class="rn-item-label">Icons went on a diet</div>
+            <div class="rn-item-desc">9 food images trimmed from <strong>19.6 MB → 49 KB</strong>. Same vibes, 99.75% lighter. Figma exports, we love to hate you.</div>
+          </div>
+        </div>
+
+        <div class="rn-item reveal">
+          <div class="rn-ico" aria-hidden="true">📐</div>
+          <div class="rn-body">
+            <div class="rn-item-label">Dashboard meal icons: 44 px, no negotiating</div>
+            <div class="rn-item-desc">They were ballooning after the WebP switch. Pinned them at a crisp 44 × 44 px. Your eyes are welcome.</div>
+          </div>
+        </div>
+
+        <div class="rn-item reveal">
+          <div class="rn-ico" aria-hidden="true">🗂️</div>
+          <div class="rn-body">
+            <div class="rn-item-label">Pantry card gets its shelves back</div>
+            <div class="rn-item-desc">The old sourced icon is out. A clean CSS-drawn three-shelf icon is in — lighter, consistent, and actually on-brand.</div>
+          </div>
+        </div>
+
+        <div class="rn-item reveal">
+          <div class="rn-ico" aria-hidden="true">🎀</div>
+          <div class="rn-body">
+            <div class="rn-item-label">Expert card: charcoal glow-up</div>
+            <div class="rn-item-desc">Swapped the placeholder for a sleek charcoal-gradient badge with a ribbon icon. Premium feel, zero clutter.</div>
+          </div>
+        </div>
+
+        <div class="rn-item reveal">
+          <div class="rn-ico" aria-hidden="true">🇬🇷</div>
+          <div class="rn-body">
+            <div class="rn-item-label">Greek: &#8220;Σερί&#8221; ✓</div>
+            <div class="rn-item-desc">We were saying <em>Σειρά</em> (a row) instead of <em>Σερί</em> (a streak). One letter. Big difference. Fixed.</div>
+          </div>
+        </div>
+
+        <div class="rn-item reveal">
+          <div class="rn-ico" aria-hidden="true">🍽️</div>
+          <div class="rn-body">
+            <div class="rn-item-label">Serving callout: less noise, more signal</div>
+            <div class="rn-item-desc">The SeasonPopular serving panel dropped the fork-and-plate emoji. Now it's a minimal left-border info strip — clean, readable, no fuss.</div>
+          </div>
+        </div>
+
+        <div class="rn-item reveal">
+          <div class="rn-ico" aria-hidden="true">🔢</div>
+          <div class="rn-body">
+            <div class="rn-item-label">Zero is a valid macro <span class="rn-bug">Fix #425</span></div>
+            <div class="rn-item-desc">Custom meals with any macro at 0 were quietly blocked. Zero is a real number. It counts now.</div>
+          </div>
+        </div>
+
+        <div class="rn-item reveal">
+          <div class="rn-ico" aria-hidden="true">🔥</div>
+          <div class="rn-body">
+            <div class="rn-item-label">Today&#8217;s Meal Plan: grid view &amp; flame calories <span class="rn-bug">Fix #427</span></div>
+            <div class="rn-item-desc">Tap the top-right icon: all meals snap into a <strong>2 × 2 grid</strong> with macro initials, section labels, and the app&#8217;s flame icon next to each calorie count. Tap again: back to normal.</div>
+          </div>
+        </div>
+
+        <div class="rn-item reveal">
+          <div class="rn-ico" aria-hidden="true">📋</div>
+          <div class="rn-body">
+            <div class="rn-item-label">Meal Plan Overview: no longer all green <span class="rn-bug">Fix #431</span></div>
+            <div class="rn-item-desc">The overview modal matched nothing. Now it matches Today&#8217;s Meal Plan: parchment background, white cards, coloured macro pills, horizontal food scroll, and a proper Apply / Cancel button pair.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- end Aug 26 2026 -->
+
+  </div>
+</section>
+
 </main>
 
 
@@ -681,6 +786,7 @@
       <a href="#/terms" data-link="terms">Terms</a>
       <a href="#/privacy" data-link="privacy">Privacy</a>
       <a href="#/delete" data-link="delete">Delete account</a>
+      <a href="#/releases" data-link="releases">What&#8217;s new</a>
       <a href="mailto:info@pantryapp.com" data-contact-email>Contact</a>
     </nav>
     <span class="foot-copy">&copy; <span id="year">2026</span> Mål. All rights reserved.</span>

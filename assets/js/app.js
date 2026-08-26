@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  var VIEWS   = ['home', 'terms', 'privacy', 'delete'];
+  var VIEWS   = ['home', 'terms', 'privacy', 'delete', 'releases'];
   var DEFAULT = 'home';
 
   /* Legacy anchors that existed on the old single-page policy.
@@ -112,9 +112,10 @@
   }
 
   function titleFor(name) {
-    if (name === 'terms')   return 'Terms & Conditions — Mål';
-    if (name === 'privacy') return 'Privacy Policy — Mål';
-    if (name === 'delete')  return 'Delete your account — Mål';
+    if (name === 'terms')    return 'Terms & Conditions — Mål';
+    if (name === 'privacy')  return 'Privacy Policy — Mål';
+    if (name === 'delete')   return 'Delete your account — Mål';
+    if (name === 'releases') return 'Release Notes — Mål';
     return 'Mål — Plan meals, waste less';
   }
 
