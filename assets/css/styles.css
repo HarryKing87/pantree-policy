@@ -1011,3 +1011,9 @@ a { color: var(--accent); }
 .theme-anim .rn-badge {
   transition: background-color .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease);
 }
+
+.rn-badge--drop {
+  background: color-mix(in srgb, var(--leaf-amber) 15%, transparent);
+  color: color-mix(in srgb, var(--leaf-amber) 85%, var(--ink));
+  border-color: color-mix(in srgb, var(--leaf-amber) 30%, transparent);
+}
