@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════════════════════
    Mål — design system
    Palette sampled from the app's own leaf mark:
      teal #55B884 → lime #9AC540 → amber #E0963B
@@ -1016,4 +1016,99 @@ a { color: var(--accent); }
   background: color-mix(in srgb, var(--leaf-amber) 15%, transparent);
   color: color-mix(in srgb, var(--leaf-amber) 85%, var(--ink));
   border-color: color-mix(in srgb, var(--leaf-amber) 30%, transparent);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   Mobile & Tablet — targeted improvements
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Tablet hero: leaf a bit tighter, copy centred cleanly ── */
+@media (max-width: 900px) {
+  .store-badges { justify-content: center; }
+  .leafmark { width: min(55%, 280px); }
+}
+
+/* ── Navigation: 5 tabs → horizontally scrollable strip ── */
+@media (max-width: 760px) {
+  .topbar-inner { padding: 10px 18px; gap: 10px; }
+
+  /* Tabs become a scrollable row; pill animation removed */
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-left: 0;
+    width: 100%;
+    border-radius: 12px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab-pill { display: none; }
+  .tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: .8rem;
+    padding: 8px 13px;
+    border-radius: 8px;
+  }
+  .tab.is-active { background: var(--surface); box-shadow: var(--shadow-sm); }
+}
+
+/* ── Hero actions: stack vertically on small phones ── */
+@media (max-width: 520px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .store-badges { flex-direction: column; align-items: center; }
+  .store-badge { width: 100%; max-width: 320px; justify-content: center; }
+}
+
+/* ── Phone mockups: reduce to 2 on tablet, 1 on small mobile ── */
+@media (max-width: 720px) {
+  .phone-c { display: none; }
+}
+@media (max-width: 520px) {
+  .phone-b { display: none; }
+  .phone { width: min(88%, 300px); }
+  .phone-screen { height: 420px; }
+}
+
+/* ── CTA / note actions: stack on small mobile ── */
+@media (max-width: 520px) {
+  .note-actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+  .note-actions .btn { width: 100%; justify-content: center; }
+}
+
+/* ── Release notes: stamp row wraps, headline scales ── */
+@media (max-width: 600px) {
+  .rn-stamp { flex-wrap: wrap; gap: 6px 8px; }
+  .rn-release { margin-bottom: 48px; }
+  .rn-headline { font-size: 1.35rem; }
+}
+
+/* ── Plan cards & jar: small padding on very small screens ── */
+@media (max-width: 430px) {
+  .plan-card { padding: 22px 18px; }
+  .jar { margin-bottom: 26px; padding-bottom: 26px; }
+  .jar-title { font-size: 1.15rem; }
+  .note { padding: 28px 20px; }
+  .goes-col { padding: 18px; }
+  .cta-card { padding: 20px 18px; }
+}
+
+/* ── Delete page "what goes" columns: single col on small mobile ── */
+@media (max-width: 480px) {
+  .what-goes { grid-template-columns: 1fr; gap: 12px; }
 }
