@@ -1,113 +1,52 @@
-# Mål — public site
+<div align="center">
 
-The public landing page, privacy policy, and account-deletion page for **Mål**.
+<img src="assets/img/readme-banner.svg" alt="Mål — Eat with intention" width="100%">
 
-Live at <https://harryking87.github.io/pantree-policy/>
+<br><br>
 
-Static, dependency-free, no build step. GitHub Pages serves `main` / root as-is.
+[![iOS](https://img.shields.io/badge/iOS-App%20Store-55B884?style=flat-square&logo=apple&logoColor=white&labelColor=1F3D2B)](https://apps.apple.com)&nbsp;
+[![Android](https://img.shields.io/badge/Android-Google%20Play-9AC540?style=flat-square&logo=google-play&logoColor=white&labelColor=1F3D2B)](https://play.google.com/store/apps/details?id=com.harry.pantree)&nbsp;
+[![v0.5.1](https://img.shields.io/badge/version-0.5.1-E0963B?style=flat-square&labelColor=1F3D2B)](https://harryking87.github.io/pantree-policy/#/release-notes)
+
+</div>
+
+<br>
+
+Mål is a personal meal planner for iPhone and Android — built around your goals, your habits, and your week. Plan ahead, track what matters, and stay consistent.
+
+<br>
+
+## What Mål does
+
+**Your day at a glance** &emsp; Today's meals, your macros, and a full log of what you've eaten. Everything you need, right here.
+
+**Plan your whole week** &emsp; Use the Planner to map out meals in advance. Drag, swap, or rearrange — it's completely up to you.
+
+**Powered by A.I.** &emsp; Tap Generate and Mål builds a complete, personalised meal plan in seconds, tailored to your goals.
+
+**Build your streak** &emsp; Log each meal as you eat it. Your streak grows every day you stay on track — and you earn achievements along the way.
+
+**Stay on schedule** &emsp; Mål reminds you when it's time to eat. You're always in control; adjust your reminders anytime in Settings.
+
+<br>
 
 ---
 
-## Structure
+<br>
 
-```
-.
-├── index.html            # shell + all three views
-├── 404.html              # bounces unknown paths back into the SPA
-├── .nojekyll             # serve files verbatim, skip Jekyll
-├── robots.txt
-├── sitemap.xml
-└── assets/
-    ├── css/styles.css    # design tokens + all styling
-    ├── js/app.js         # hash router, reveals, theme toggle
-    └── img/favicon.svg   # leaf mark
-```
+## Legal & support
 
-## Routes
-
-| URL | View |
+| | |
 |---|---|
-| `#/` (or no hash) | Home |
-| `#/privacy` | Privacy policy |
-| `#/delete` | Delete your account |
+| [Privacy Policy](https://harryking87.github.io/pantree-policy/#/privacy) | How Mål handles your data |
+| [Delete your account](https://harryking87.github.io/pantree-policy/#/delete) | Request permanent deletion of your account and data |
+| [Release notes](https://harryking87.github.io/pantree-policy/#/release-notes) | What's changed in each version |
 
-Views swap client-side — the old view animates out and unmounts, the new one
-mounts and animates in. No page reload.
+<br>
 
-### ⚠️ Legacy deep links
+---
 
-The old site was a single page whose deletion section lived at
-`#delete-account`. **That URL is almost certainly registered with Google Play
-as the app's account-deletion URL.** It still works: `assets/js/app.js` maps
-legacy bare anchors onto the new routes.
-
-```js
-var LEGACY = {
-  'delete-account':           'delete',
-  'delete_account':           'delete',
-  'privacy':                  'privacy',
-  'privacy-policy':           'privacy',
-  'request-account-deletion': 'delete'
-};
-```
-
-The `id="delete-account"` anchor is also still present on section 06 of the
-privacy policy. **Don't remove either without updating the store listing first.**
-
-## Design tokens
-
-Colours are sampled from the app's own leaf mark
-(`src/assets/logo_pantry_full.png` in the app repo), so the site and the app
-share one identity:
-
-| Token | Light | Role |
-|---|---|---|
-| `--leaf-teal` | `#55B884` | gradient start |
-| `--leaf-lime` | `#9AC540` | gradient mid |
-| `--leaf-amber` | `#E0963B` | gradient end |
-| `--forest` | `#1F3D2B` | deep brand ground |
-| `--terracotta` | `#C8612A` | stem, the dot in "Mål." |
-| `--accent` | `#3F7D5C` | buttons, links — matches in-app accent |
-
-Type: **Bricolage Grotesque** (display) + **Hanken Grotesk** (body), via Google Fonts.
-
-### Theming
-
-Three states are handled explicitly:
-
-- `:root` — full light palette
-- `@media (prefers-color-scheme: dark)` scoped to `:root:not([data-theme="light"])` — follows the OS
-- `:root[data-theme="dark"]` — the in-page toggle wins either direction
-
-The toggle persists to `localStorage` under `mal-theme`.
-
-## Editing the privacy policy
-
-The policy text lives inline in `index.html` under
-`<section class="view" data-view="privacy">`, as seven numbered `.jar` sections.
-Update the `Last updated` pill in `.doc-hero` whenever the text changes.
-
-## Contact address
-
-The contact/deletion address appears in four places, all marked
-`data-contact-email`:
-
-```
-grep -n 'data-contact-email' index.html
-```
-
-## Local preview
-
-Any static server works:
-
-```bash
-python -m http.server 8080
-```
-
-Then open <http://localhost:8080/>.
-
-## Accessibility & motion
-
-- Every animation is disabled under `prefers-reduced-motion: reduce`.
-- Views carry `aria-labelledby`; the active tab gets `aria-current="page"`.
-- There's a skip link, and focus styling is visible throughout.
+<div align="center">
+<br>
+<sub>© 2026 Mål &nbsp;·&nbsp; <a href="https://harryking87.github.io/pantree-policy/#/privacy">Privacy</a> &nbsp;·&nbsp; <a href="mailto:harrykinghsv@gmail.com">Contact</a></sub>
+</div>
