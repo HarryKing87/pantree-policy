@@ -38,7 +38,7 @@
 </head>
 <body>
 
-<a class="skip-link" href="#view-root">Skip to content</a>
+<a class="skip-link" href="#view-root" data-i18n="nav.skip">Skip to content</a>
 
 <!-- ══════════════════════ TOP BAR ══════════════════════ -->
 <header class="topbar" id="topbar">
@@ -64,14 +64,29 @@
 
     <nav class="tabs" id="tabs" aria-label="Sections">
       <span class="tab-pill" id="tab-pill" aria-hidden="true"></span>
-      <a class="tab" href="#/"        data-link="home"     role="tab">Home</a>
-      <a class="tab" href="#/terms"   data-link="terms"    role="tab">Terms</a>
-      <a class="tab" href="#/privacy" data-link="privacy"  role="tab">Privacy</a>
-      <a class="tab" href="#/delete"  data-link="delete"   role="tab">Delete&nbsp;account</a>
-      <a class="tab" href="#/releases" data-link="releases" role="tab">What&#8217;s&nbsp;new</a>
+      <a class="tab" href="#/"        data-link="home"     role="tab" data-i18n="nav.home">Home</a>
+      <a class="tab" href="#/terms"   data-link="terms"    role="tab" data-i18n="nav.terms">Terms</a>
+      <a class="tab" href="#/privacy" data-link="privacy"  role="tab" data-i18n="nav.privacy">Privacy</a>
+      <a class="tab" href="#/delete"  data-link="delete"   role="tab" data-i18n-html="nav.delete">Delete&nbsp;account</a>
+      <a class="tab" href="#/releases" data-link="releases" role="tab" data-i18n-html="nav.releases">What&#8217;s&nbsp;new</a>
     </nav>
 
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+    <div class="lang-switch" id="lang-switch">
+      <button class="lang-toggle" id="lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Change language" title="Change language" data-i18n-attr-aria-label="nav.langToggle" data-i18n-attr-title="nav.langToggle">
+        <span class="lang-flag" id="lang-flag" aria-hidden="true">🇬🇧</span>
+        <span class="lang-code" id="lang-code">EN</span>
+      </button>
+      <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="Select language" hidden>
+        <li role="option" data-lang="en"><span aria-hidden="true">🇬🇧</span> English</li>
+        <li role="option" data-lang="de"><span aria-hidden="true">🇩🇪</span> Deutsch</li>
+        <li role="option" data-lang="el"><span aria-hidden="true">🇬🇷</span> Ελληνικά</li>
+        <li role="option" data-lang="es"><span aria-hidden="true">🇪🇸</span> Español</li>
+        <li role="option" data-lang="it"><span aria-hidden="true">🇮🇹</span> Italiano</li>
+        <li role="option" data-lang="pl"><span aria-hidden="true">🇵🇱</span> Polski</li>
+      </ul>
+    </div>
+
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme" data-i18n-attr-aria-label="nav.themeToggle" data-i18n-attr-title="nav.themeToggle">
       <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><path d="M12 2.6v2.6"/><path d="M12 18.8v2.6"/><path d="M2.6 12h2.6"/><path d="M18.8 12h2.6"/><path d="M5.4 5.4l1.8 1.8"/><path d="M16.8 16.8l1.8 1.8"/><path d="M18.6 5.4l-1.8 1.8"/><path d="M7.2 16.8l-1.8 1.8"/></g></svg>
       <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 019.8 4a8.4 8.4 0 108.9 12.6"/></svg>
     </button>
@@ -87,23 +102,23 @@
 
   <div class="hero">
     <div class="hero-copy">
-      <p class="eyebrow" data-stagger="1">Kitchen · Meals · Goals</p>
-      <h1 class="hero-title" id="home-h1" data-stagger="2">
+      <p class="eyebrow" data-stagger="1" data-i18n="home.eyebrow">Kitchen · Meals · Goals</p>
+      <h1 class="hero-title" id="home-h1" data-stagger="2" data-i18n-html="home.heroTitle">
         Cook what you<br><em>already</em> have.
       </h1>
-      <p class="hero-sub" data-stagger="3">
+      <p class="hero-sub" data-stagger="3" data-i18n="home.heroSub">
         Mål keeps track of what's in your kitchen, plans meals around it,
         and quietly makes sure less of it ends up in the bin.
       </p>
       <div class="hero-actions" data-stagger="4">
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=io.ionic.pantree" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:17px;height:17px;vertical-align:middle;margin-right:7px;display:inline-block;flex-shrink:0"><path fill="#4285F4" d="M1.22,0L13.47,12.25L1.22,24C0.5,23.56 0,22.79 0,21.87V2.13C0,1.21 0.5,0.44 1.22,0Z"/><path fill="#34A853" d="M3.38,0.55L19.66,9.42L17.05,12.66Z"/><path fill="#FBBC04" d="M19.95,10.08L17.58,8.76L14.97,12L17.58,15.24L19.95,13.92C20.64,13.62 21.09,12.96 21.09,12 21.09,11.04 20.64,10.38 19.95,10.08Z"/><path fill="#EA4335" d="M3.38,23.45L17.05,16L14.44,12.76Z"/></svg>Get it on Google Play</a>
-        <a class="btn btn-ghost" href="#/privacy" data-link="privacy">Privacy policy</a>
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=io.ionic.pantree" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:17px;height:17px;vertical-align:middle;margin-right:7px;display:inline-block;flex-shrink:0"><path fill="#4285F4" d="M1.22,0L13.47,12.25L1.22,24C0.5,23.56 0,22.79 0,21.87V2.13C0,1.21 0.5,0.44 1.22,0Z"/><path fill="#34A853" d="M3.38,0.55L19.66,9.42L17.05,12.66Z"/><path fill="#FBBC04" d="M19.95,10.08L17.58,8.76L14.97,12L17.58,15.24L19.95,13.92C20.64,13.62 21.09,12.96 21.09,12 21.09,11.04 20.64,10.38 19.95,10.08Z"/><path fill="#EA4335" d="M3.38,23.45L17.05,16L14.44,12.76Z"/></svg><span data-i18n="home.ctaPlay">Get it on Google Play</span></a>
+        <a class="btn btn-ghost" href="#/privacy" data-link="privacy" data-i18n="common.privacyPolicy">Privacy policy</a>
       </div>
       <div class="store-badges" data-stagger="6" aria-label="Also available on">
         <a class="store-badge store-badge--ios" href="#" aria-label="App Store — coming soon" tabindex="-1">
           <svg viewBox="0 0 814 1000" aria-hidden="true"><path fill="currentColor" d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57-155.5-127C46.7 790.7 0 663 0 541.8c0-194.4 126.4-297.5 250.8-297.5 66.1 0 121.2 43.4 162.7 43.4 39.5 0 101.1-46 176.3-46 28.5 0 130.9 2.6 198.3 99.2zm-234-181.5c31.1-36.9 53.1-88.1 53.1-139.3 0-7.1-.6-14.3-1.9-20.1-50.6 1.9-110.8 33.7-147.1 75.8-28.5 32.4-55.1 83.6-55.1 135.5 0 7.8 1.3 15.6 1.9 18.1 3.2.6 8.4 1.3 13.6 1.3 45.4 0 102.5-30.4 135.5-71.3z"/></svg>
           <span class="badge-copy">
-            <span class="badge-label">Coming to</span>
+            <span class="badge-label" data-i18n="home.comingTo">Coming to</span>
             <span class="badge-name">App Store</span>
           </span>
         </a>
@@ -147,73 +162,73 @@
 
   <!-- ─────────── what it does ─────────── -->
   <div class="section">
-    <h2 class="sec-title reveal">Three things, done well.</h2>
+    <h2 class="sec-title reveal" data-i18n="home.section1Title">Three things, done well.</h2>
 
     <div class="cards">
       <article class="card reveal">
         <span class="card-ico ico-jar" aria-hidden="true">
           <svg viewBox="0 0 32 32"><path d="M11 4h10M10.5 8h11a2 2 0 012 2v14a4 4 0 01-4 4h-8a4 4 0 01-4-4V10a2 2 0 012-2Z"/><path d="M8.5 17h15"/></svg>
         </span>
-        <h3>Know what you have</h3>
-        <p>Add food once and Mål tracks quantity, unit and expiry — so nothing hides at the back of the fridge until it's too late.</p>
+        <h3 data-i18n="home.card1Title">Know what you have</h3>
+        <p data-i18n="home.card1Body">Add food once and Mål tracks quantity, unit and expiry — so nothing hides at the back of the fridge until it's too late.</p>
       </article>
 
       <article class="card reveal">
         <span class="card-ico ico-plan" aria-hidden="true">
           <svg viewBox="0 0 32 32"><rect x="4.5" y="6.5" width="23" height="21" rx="3.5"/><path d="M4.5 13h23M11 3.5V8M21 3.5V8"/><path d="M11 19h3M18 19h3M11 23h3"/></svg>
         </span>
-        <h3>Plan meals that fit</h3>
-        <p>Daily plans built from your real ingredients and your real targets. Cook a meal and your kitchen count updates itself.</p>
+        <h3 data-i18n="home.card2Title">Plan meals that fit</h3>
+        <p data-i18n="home.card2Body">Daily plans built from your real ingredients and your real targets. Cook a meal and your kitchen count updates itself.</p>
       </article>
 
       <article class="card reveal">
         <span class="card-ico ico-goal" aria-hidden="true">
           <svg viewBox="0 0 32 32"><path d="M4 25.5c4-1 5.5-6 9-6s4 5.5 7.5 5.5 4.5-4 7.5-8"/><circle cx="24" cy="9" r="3"/><path d="M4 28.5h24"/></svg>
         </span>
-        <h3>See the whole picture</h3>
-        <p>Calories, carbs, protein and fat tracked across the week — shown as progress you can actually read at a glance.</p>
+        <h3 data-i18n="home.card3Title">See the whole picture</h3>
+        <p data-i18n="home.card3Body">Calories, carbs, protein and fat tracked across the week — shown as progress you can actually read at a glance.</p>
       </article>
     </div>
   </div>
 
   <!-- ─────────── personalisation ─────────── -->
   <div class="section personalize">
-    <h2 class="sec-title reveal">Tailored to how you eat.</h2>
-    <p class="sec-sub reveal">Set your diet style, flag your allergies, pick your favourite cuisines — Mål remembers it all so every plan fits.</p>
+    <h2 class="sec-title reveal" data-i18n="home.personalizeTitle">Tailored to how you eat.</h2>
+    <p class="sec-sub reveal" data-i18n="home.personalizeSub">Set your diet style, flag your allergies, pick your favourite cuisines — Mål remembers it all so every plan fits.</p>
 
     <div class="pill-group reveal">
-      <p class="pill-group-label">Dietary styles</p>
+      <p class="pill-group-label" data-i18n="home.dietaryStylesLabel">Dietary styles</p>
       <div class="pill-strip">
-        <span class="diet-pill">🥦 Vegan</span>
-        <span class="diet-pill">🌿 Vegetarian</span>
-        <span class="diet-pill">🥑 Keto</span>
-        <span class="diet-pill">🐟 Mediterranean</span>
-        <span class="diet-pill">🥩 Paleo</span>
-        <span class="diet-pill">🌾 Gluten-free</span>
-        <span class="diet-pill">🥛 Dairy-free</span>
-        <span class="diet-pill">📉 Low-carb</span>
-        <span class="diet-pill">💪 High-protein</span>
+        <span class="diet-pill" data-i18n-html="home.diet1">🥦 Vegan</span>
+        <span class="diet-pill" data-i18n-html="home.diet2">🌿 Vegetarian</span>
+        <span class="diet-pill" data-i18n-html="home.diet3">🥑 Keto</span>
+        <span class="diet-pill" data-i18n-html="home.diet4">🐟 Mediterranean</span>
+        <span class="diet-pill" data-i18n-html="home.diet5">🥩 Paleo</span>
+        <span class="diet-pill" data-i18n-html="home.diet6">🌾 Gluten-free</span>
+        <span class="diet-pill" data-i18n-html="home.diet7">🥛 Dairy-free</span>
+        <span class="diet-pill" data-i18n-html="home.diet8">📉 Low-carb</span>
+        <span class="diet-pill" data-i18n-html="home.diet9">💪 High-protein</span>
       </div>
     </div>
 
     <div class="pill-group reveal">
-      <p class="pill-group-label">Cuisines</p>
+      <p class="pill-group-label" data-i18n="home.cuisinesLabel">Cuisines</p>
       <div class="pill-strip">
-        <span class="diet-pill">🍕 Italian</span>
-        <span class="diet-pill">🍣 Japanese</span>
-        <span class="diet-pill">🌮 Mexican</span>
-        <span class="diet-pill">🍛 Indian</span>
-        <span class="diet-pill">🥟 Chinese</span>
-        <span class="diet-pill">🫒 Mediterranean</span>
-        <span class="diet-pill">🥐 French</span>
-        <span class="diet-pill">🍜 Thai</span>
-        <span class="diet-pill">🧆 Greek</span>
-        <span class="diet-pill">🍔 American</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine1">🍕 Italian</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine2">🍣 Japanese</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine3">🌮 Mexican</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine4">🍛 Indian</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine5">🥟 Chinese</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine6">🫒 Mediterranean</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine7">🥐 French</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine8">🍜 Thai</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine9">🧆 Greek</span>
+        <span class="diet-pill" data-i18n-html="home.cuisine10">🍔 American</span>
       </div>
     </div>
 
     <div class="pill-group reveal">
-      <p class="pill-group-label">Available in 6 languages</p>
+      <p class="pill-group-label" data-i18n="home.languagesLabel">Available in 6 languages</p>
       <div class="pill-strip">
         <span class="diet-pill">🇬🇧 English</span>
         <span class="diet-pill">🇩🇪 Deutsch</span>
@@ -227,31 +242,31 @@
 
   <!-- ─────────── screens ─────────── -->
   <div class="section section-screens">
-    <h2 class="sec-title reveal">A look inside.</h2>
-    <p class="sec-sub reveal">Light or dark — Mål follows your phone.</p>
+    <h2 class="sec-title reveal" data-i18n="home.screensTitle">A look inside.</h2>
+    <p class="sec-sub reveal" data-i18n="home.screensSub">Light or dark — Mål follows your phone.</p>
 
     <div class="phones">
 
       <!-- phone 1 : dashboard -->
       <div class="phone phone-a reveal" aria-hidden="true">
         <div class="phone-screen">
-          <div class="ph-greet"><span class="ph-avatar"></span><div><span class="ph-hi">Hi! 👋</span><strong>Jane</strong></div></div>
+          <div class="ph-greet"><span class="ph-avatar"></span><div><span class="ph-hi" data-i18n="home.phoneHi">Hi! 👋</span><strong>Jane</strong></div></div>
 
           <div class="ph-cal">
-            <div class="ph-cal-month">August 2026</div>
+            <div class="ph-cal-month" data-i18n="home.phoneMonth">August 2026</div>
             <div class="ph-cal-days">
-              <span class="on"><i>Mon</i><b>24</b><u></u></span>
-              <span><i>Tue</i><b>25</b><u></u></span>
-              <span><i>Wed</i><b>26</b></span>
-              <span><i>Thu</i><b>27</b><u></u></span>
-              <span><i>Fri</i><b>28</b></span>
-              <span><i>Sat</i><b>29</b></span>
+              <span class="on"><i data-i18n="home.dayMon">Mon</i><b>24</b><u></u></span>
+              <span><i data-i18n="home.dayTue">Tue</i><b>25</b><u></u></span>
+              <span><i data-i18n="home.dayWed">Wed</i><b>26</b></span>
+              <span><i data-i18n="home.dayThu">Thu</i><b>27</b><u></u></span>
+              <span><i data-i18n="home.dayFri">Fri</i><b>28</b></span>
+              <span><i data-i18n="home.daySat">Sat</i><b>29</b></span>
             </div>
             <div class="ph-cal-btns"><span class="ph-fab">🛒</span><span class="ph-fab">＋</span></div>
           </div>
 
           <div class="ph-card">
-            <div class="ph-card-head"><strong>Calories</strong><span>This month</span></div>
+            <div class="ph-card-head"><strong data-i18n="home.phoneCalories">Calories</strong><span data-i18n="home.phoneThisMonth">This month</span></div>
             <div class="ph-cal-total">16,185 Cal</div>
             <div class="ph-spark">
               <i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:26%"></i>
@@ -266,23 +281,23 @@
       <!-- phone 2 : meal plan (dark) -->
       <div class="phone phone-b is-dark reveal" aria-hidden="true">
         <div class="phone-screen">
-          <div class="ph-sheet-head"><strong>Today's Meal plan</strong><span class="ph-ring">25</span></div>
+          <div class="ph-sheet-head"><strong data-i18n="home.phoneMealPlanTitle">Today's Meal plan</strong><span class="ph-ring">25</span></div>
 
-          <span class="ph-meal-n">Meal 1.</span>
+          <span class="ph-meal-n" data-i18n="home.phoneMeal1">Meal 1.</span>
           <div class="ph-meal">
             <div class="ph-kcal">410 kcal</div>
-            <div class="ph-meal-name">Mediterranean Feta &amp; Spinach Omelet</div>
-            <div class="ph-chips"><em class="p">Protein 24g</em><em class="c">Carbs 4g</em><em class="f">Fat 33g</em></div>
-            <p>1 omelet made with 3 eggs, spinach and feta</p>
+            <div class="ph-meal-name" data-i18n="home.phoneMealName1">Mediterranean Feta &amp; Spinach Omelet</div>
+            <div class="ph-chips"><em class="p" data-i18n-html="home.phoneMacroProtein24">Protein 24g</em><em class="c" data-i18n-html="home.phoneMacroCarbs4">Carbs 4g</em><em class="f" data-i18n-html="home.phoneMacroFat33">Fat 33g</em></div>
+            <p data-i18n="home.phoneMealDesc1">1 omelet made with 3 eggs, spinach and feta</p>
           </div>
 
-          <span class="ph-meal-n">Meal 2.</span>
+          <span class="ph-meal-n" data-i18n="home.phoneMeal2">Meal 2.</span>
           <div class="ph-meal">
             <span class="ph-tick">✓</span>
             <div class="ph-kcal">480 kcal</div>
-            <div class="ph-meal-name">Greek Style Chicken Salad</div>
-            <div class="ph-chips"><em class="p">Protein 42g</em><em class="c">Carbs 6g</em><em class="f">Fat 32g</em></div>
-            <p>1 salad bowl with grilled chicken and olive oil</p>
+            <div class="ph-meal-name" data-i18n="home.phoneMealName2">Greek Style Chicken Salad</div>
+            <div class="ph-chips"><em class="p" data-i18n-html="home.phoneMacroProtein42">Protein 42g</em><em class="c" data-i18n-html="home.phoneMacroCarbs6">Carbs 6g</em><em class="f" data-i18n-html="home.phoneMacroFat32">Fat 32g</em></div>
+            <p data-i18n="home.phoneMealDesc2">1 salad bowl with grilled chicken and olive oil</p>
           </div>
         </div>
       </div>
@@ -290,21 +305,21 @@
       <!-- phone 3 : insights -->
       <div class="phone phone-c reveal" aria-hidden="true">
         <div class="phone-screen">
-          <div class="ph-sheet-head"><strong>Your Insights</strong><span class="ph-x">✕</span></div>
+          <div class="ph-sheet-head"><strong data-i18n="home.phoneInsightsTitle">Your Insights</strong><span class="ph-x">✕</span></div>
 
           <div class="ph-tiles">
-            <div class="ph-tile warm"><span>Weekly Calories</span><b data-count="14858">14858</b><i>kcal</i></div>
-            <div class="ph-tile cool"><span>Carbs Goal</span><b data-count="1857">1857</b><i>g</i></div>
-            <div class="ph-tile cool"><span>Protein Goal</span><b data-count="743">743</b><i>g</i></div>
-            <div class="ph-tile warm"><span>Fat Goal</span><b data-count="495">495</b><i>g</i></div>
+            <div class="ph-tile warm"><span data-i18n="home.phoneTile1">Weekly Calories</span><b data-count="14858">14858</b><i>kcal</i></div>
+            <div class="ph-tile cool"><span data-i18n="home.phoneTile2">Carbs Goal</span><b data-count="1857">1857</b><i>g</i></div>
+            <div class="ph-tile cool"><span data-i18n="home.phoneTile3">Protein Goal</span><b data-count="743">743</b><i>g</i></div>
+            <div class="ph-tile warm"><span data-i18n="home.phoneTile4">Fat Goal</span><b data-count="495">495</b><i>g</i></div>
           </div>
 
           <div class="ph-card">
-            <strong class="ph-gp-title">Goal Progress</strong>
-            <div class="ph-bar"><span>Monthly Calories</span><b>60%</b><u class="warm" style="--w:60%"></u></div>
-            <div class="ph-bar"><span>Weekly Carbs</span><b>1%</b><u class="cool" style="--w:1%"></u></div>
-            <div class="ph-bar"><span>Weekly Protein</span><b>19%</b><u class="cool" style="--w:19%"></u></div>
-            <div class="ph-bar"><span>Weekly Fat</span><b>28%</b><u class="warm" style="--w:28%"></u></div>
+            <strong class="ph-gp-title" data-i18n="home.phoneGoalProgress">Goal Progress</strong>
+            <div class="ph-bar"><span data-i18n="home.phoneBar1">Monthly Calories</span><b>60%</b><u class="warm" style="--w:60%"></u></div>
+            <div class="ph-bar"><span data-i18n="home.phoneBar2">Weekly Carbs</span><b>1%</b><u class="cool" style="--w:1%"></u></div>
+            <div class="ph-bar"><span data-i18n="home.phoneBar3">Weekly Protein</span><b>19%</b><u class="cool" style="--w:19%"></u></div>
+            <div class="ph-bar"><span data-i18n="home.phoneBar4">Weekly Fat</span><b>28%</b><u class="warm" style="--w:28%"></u></div>
           </div>
         </div>
       </div>
@@ -314,8 +329,8 @@
 
   <!-- ─────────── extra features ─────────── -->
   <div class="section">
-    <h2 class="sec-title reveal">And a lot more.</h2>
-    <p class="sec-sub reveal">The features that make Mål more than just a tracker.</p>
+    <h2 class="sec-title reveal" data-i18n="home.moreTitle">And a lot more.</h2>
+    <p class="sec-sub reveal" data-i18n="home.moreSub">The features that make Mål more than just a tracker.</p>
 
     <div class="features-grid">
 
@@ -323,24 +338,24 @@
         <span class="feat-ico" aria-hidden="true">
           <svg viewBox="0 0 32 32"><path d="M16 5 L18.5 11.5 L25.5 14 L18.5 16.5 L16 23 L13.5 16.5 L6.5 14 L13.5 11.5 Z"/><path d="M24 19 L25.3 22.5 L29 23.8 L25.3 25 L24 28.5 L22.7 25 L19 23.8 L22.7 22.5 Z"/></svg>
         </span>
-        <h3>AI-generated meal plans</h3>
-        <p>Tell Mål your diet, allergies and cuisines. It generates a full daily plan in seconds — free users get 5 plans a month, Premium is unlimited.</p>
+        <h3 data-i18n="home.feat1Title">AI-generated meal plans</h3>
+        <p data-i18n="home.feat1Body">Tell Mål your diet, allergies and cuisines. It generates a full daily plan in seconds — free users get 5 plans a month, Premium is unlimited.</p>
       </div>
 
       <div class="feat reveal">
         <span class="feat-ico" aria-hidden="true">
           <svg viewBox="0 0 32 32"><circle cx="12" cy="11" r="4.5"/><path d="M3 27v-2c0-3.5 4.5-6 9-6"/><circle cx="22" cy="11" r="3.5"/><path d="M29 27v-2c0-3-3.5-5.2-7-5.2"/><path d="M17.5 21c2 .7 4 2 4.5 4"/></svg>
         </span>
-        <h3>Shared shopping lists</h3>
-        <p>Share your shopping list with family or housemates. Everyone can check items off in real time — one cart, no duplicates.</p>
+        <h3 data-i18n="home.feat2Title">Shared shopping lists</h3>
+        <p data-i18n="home.feat2Body">Share your shopping list with family or housemates. Everyone can check items off in real time — one cart, no duplicates.</p>
       </div>
 
       <div class="feat reveal">
         <span class="feat-ico" aria-hidden="true">
           <svg viewBox="0 0 32 32"><path d="M10.5 6h11v8a5.5 5.5 0 01-11 0V6z"/><path d="M7 7H5a3 3 0 003 3"/><path d="M25 7h2.5a3 3 0 01-2.5 3"/><path d="M16 19v5"/><path d="M11.5 24h9"/></svg>
         </span>
-        <h3>Achievements &amp; streaks</h3>
-        <p>Log consistently, earn achievements, and build your streak. Keep it up and you'll unlock Mål Premium for free.</p>
+        <h3 data-i18n="home.feat3Title">Achievements &amp; streaks</h3>
+        <p data-i18n="home.feat3Body">Log consistently, earn achievements, and build your streak. Keep it up and you'll unlock Mål Premium for free.</p>
       </div>
 
     </div>
@@ -348,49 +363,49 @@
 
   <!-- ─────────── free vs premium ─────────── -->
   <div class="section">
-    <h2 class="sec-title reveal">Free, with more when you need it.</h2>
-    <p class="sec-sub reveal">Start free. Upgrade inside the app when you want unlimited AI and deeper insights.</p>
+    <h2 class="sec-title reveal" data-i18n="home.plansTitle">Free, with more when you need it.</h2>
+    <p class="sec-sub reveal" data-i18n="home.plansSub">Start free. Upgrade inside the app when you want unlimited AI and deeper insights.</p>
 
     <div class="plan-compare">
 
       <div class="plan-card reveal">
-        <div class="plan-name">Free</div>
-        <div class="plan-tagline">Everything you need to get started</div>
+        <div class="plan-name" data-i18n="home.freePlanName">Free</div>
+        <div class="plan-tagline" data-i18n="home.freePlanTagline">Everything you need to get started</div>
         <ul class="plan-list">
-          <li>Pantry &amp; expiry tracking</li>
-          <li>Daily meal planning</li>
-          <li>Shareable shopping lists</li>
-          <li>Calorie &amp; macro tracking</li>
-          <li>Achievements &amp; streaks</li>
-          <li>5 AI meal plans per month</li>
+          <li data-i18n-html="home.freeItem1">Pantry &amp; expiry tracking</li>
+          <li data-i18n="home.freeItem2">Daily meal planning</li>
+          <li data-i18n="home.freeItem3">Shareable shopping lists</li>
+          <li data-i18n-html="home.freeItem4">Calorie &amp; macro tracking</li>
+          <li data-i18n-html="home.freeItem5">Achievements &amp; streaks</li>
+          <li data-i18n="home.freeItem6">5 AI meal plans per month</li>
         </ul>
       </div>
 
       <div class="plan-card is-premium reveal">
-        <span class="plan-badge">Premium</span>
-        <div class="plan-name">Premium</div>
-        <div class="plan-tagline">Unlimited AI and advanced nutrition insights</div>
+        <span class="plan-badge" data-i18n="home.premiumPlanBadge">Premium</span>
+        <div class="plan-name" data-i18n="home.premiumPlanName">Premium</div>
+        <div class="plan-tagline" data-i18n="home.premiumPlanTagline">Unlimited AI and advanced nutrition insights</div>
         <ul class="plan-list">
-          <li>Everything in Free</li>
-          <li>Unlimited AI meal generations</li>
-          <li>Advanced nutrition insights</li>
-          <li>AI coaching &amp; predictions</li>
-          <li>Personalised lifestyle tips</li>
+          <li data-i18n="home.premiumItem1">Everything in Free</li>
+          <li data-i18n="home.premiumItem2">Unlimited AI meal generations</li>
+          <li data-i18n="home.premiumItem3">Advanced nutrition insights</li>
+          <li data-i18n-html="home.premiumItem4">AI coaching &amp; predictions</li>
+          <li data-i18n="home.premiumItem5">Personalised lifestyle tips</li>
         </ul>
       </div>
 
     </div>
-    <p class="plan-note">Upgrade from inside the app — pricing shown in your local currency.</p>
+    <p class="plan-note" data-i18n="home.planNote">Upgrade from inside the app — pricing shown in your local currency.</p>
   </div>
 
   <!-- ─────────── closing note ─────────── -->
   <div class="section">
     <div class="note reveal">
-      <h2>Your data stays yours.</h2>
-      <p>We don't sell personal data — not to advertisers, not to anyone. You can read exactly what we collect and why, and you can ask us to delete all of it whenever you like.</p>
+      <h2 data-i18n="home.closingTitle">Your data stays yours.</h2>
+      <p data-i18n="home.closingBody">We don't sell personal data — not to advertisers, not to anyone. You can read exactly what we collect and why, and you can ask us to delete all of it whenever you like.</p>
       <div class="note-actions">
-        <a class="btn btn-primary" href="#/privacy" data-link="privacy">Privacy policy</a>
-        <a class="btn btn-ghost" href="#/delete" data-link="delete">Request deletion</a>
+        <a class="btn btn-primary" href="#/privacy" data-link="privacy" data-i18n="common.privacyPolicy">Privacy policy</a>
+        <a class="btn btn-ghost" href="#/delete" data-link="delete" data-i18n="common.requestDeletion">Request deletion</a>
       </div>
     </div>
   </div>
@@ -402,99 +417,99 @@
 <section class="view" data-view="terms" aria-labelledby="terms-h1" hidden>
 
   <div class="doc-hero">
-    <p class="eyebrow">Legal · App Terms</p>
-    <h1 class="doc-title" id="terms-h1">Terms &amp; Conditions</h1>
-    <p class="doc-sub">The rules for using Mål — written plainly so you know what you're agreeing to.</p>
-    <span class="pill">Last updated August 2026</span>
+    <p class="eyebrow" data-i18n="terms.eyebrow">Legal · App Terms</p>
+    <h1 class="doc-title" id="terms-h1" data-i18n="terms.title">Terms &amp; Conditions</h1>
+    <p class="doc-sub" data-i18n="terms.sub">The rules for using Mål — written plainly so you know what you're agreeing to.</p>
+    <span class="pill" data-i18n="terms.lastUpdated">Last updated August 2026</span>
   </div>
 
   <div class="doc">
 
-    <div class="intro-card">
+    <div class="intro-card" data-i18n="terms.intro">
       By downloading, installing or using Mål you agree to these Terms &amp; Conditions. If you do not agree, please do not use the app.
     </div>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">01</span><h2 class="jar-title">Using Mål</h2></div>
+      <div class="jar-label"><span class="jar-number">01</span><h2 class="jar-title" data-i18n="terms.s1Title">Using Mål</h2></div>
       <div class="jar-body">
-        <p>We grant you a limited, non-exclusive, non-transferable licence to use Mål for personal, non-commercial purposes. You may not:</p>
+        <p data-i18n="terms.s1P1">We grant you a limited, non-exclusive, non-transferable licence to use Mål for personal, non-commercial purposes. You may not:</p>
         <ul>
-          <li>Reverse-engineer, decompile, or attempt to access the source code.</li>
-          <li>Modify, adapt, or create derivative works from the app.</li>
-          <li>Use Mål for commercial purposes without our written permission.</li>
-          <li>Attempt to gain unauthorised access to our servers or another user's account.</li>
-          <li>Transmit malware, spam, or any code that could harm other users or our systems.</li>
-          <li>Scrape, harvest, or systematically collect data from the app.</li>
+          <li data-i18n="terms.s1Li1">Reverse-engineer, decompile, or attempt to access the source code.</li>
+          <li data-i18n="terms.s1Li2">Modify, adapt, or create derivative works from the app.</li>
+          <li data-i18n="terms.s1Li3">Use Mål for commercial purposes without our written permission.</li>
+          <li data-i18n="terms.s1Li4">Attempt to gain unauthorised access to our servers or another user's account.</li>
+          <li data-i18n="terms.s1Li5">Transmit malware, spam, or any code that could harm other users or our systems.</li>
+          <li data-i18n="terms.s1Li6">Scrape, harvest, or systematically collect data from the app.</li>
         </ul>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">02</span><h2 class="jar-title">Your Account</h2></div>
+      <div class="jar-label"><span class="jar-number">02</span><h2 class="jar-title" data-i18n="terms.s2Title">Your Account</h2></div>
       <div class="jar-body">
-        <p>You must be at least 13 years old to create an account and must provide accurate, truthful information. You are responsible for keeping your credentials confidential and for all activity that occurs under your account.</p>
-        <p>We reserve the right to suspend or permanently remove accounts that violate these terms, provide false information, or engage in abusive, threatening, or otherwise harmful behaviour.</p>
+        <p data-i18n="terms.s2P1">You must be at least 13 years old to create an account and must provide accurate, truthful information. You are responsible for keeping your credentials confidential and for all activity that occurs under your account.</p>
+        <p data-i18n="terms.s2P2">We reserve the right to suspend or permanently remove accounts that violate these terms, provide false information, or engage in abusive, threatening, or otherwise harmful behaviour.</p>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">03</span><h2 class="jar-title">AI &amp; Nutrition Advice</h2></div>
+      <div class="jar-label"><span class="jar-number">03</span><h2 class="jar-title" data-i18n="terms.s3Title">AI &amp; Nutrition Advice</h2></div>
       <div class="jar-body">
-        <p><strong>How AI is used.</strong> Mål uses artificial intelligence to generate meal plans, recipes, and personalised nutrition insights based on the goals, preferences, and dietary information you provide. These outputs are created dynamically and are intended for general informational and planning purposes only.</p>
-        <p><strong>Not medical or dietary advice.</strong> Nothing generated by Mål — including AI-produced meal plans, recipes, calorie targets, or nutritional breakdowns — constitutes medical advice, diagnosis, or treatment. If you have a health condition, including but not limited to diabetes, cardiovascular disease, eating disorders, kidney disease, pregnancy, or food allergies, consult a qualified healthcare professional before following any recommendation produced by the app.</p>
-        <p><strong>Accuracy and limitations.</strong> AI-generated content may be incorrect, incomplete, or contextually inappropriate. Nutritional figures in particular may not reflect your specific ingredients, brands, cooking methods, or portion sizes. Do not rely on AI outputs as the sole basis for any health or clinical decision.</p>
-        <p><strong>Third-party AI processing.</strong> To generate meal plans and recipes, the dietary preferences and goals you enter are processed by a third-party AI provider. This data is anonymised before transmission — no personally identifiable information is shared with AI providers. See the Privacy Policy for full details.</p>
-        <p><strong>Your responsibility.</strong> You are responsible for the accuracy of the information you supply to Mål. The app is not liable for outputs generated from incomplete, inaccurate, or misleading data you provide.</p>
+        <p data-i18n-html="terms.s3P1"><strong>How AI is used.</strong> Mål uses artificial intelligence to generate meal plans, recipes, and personalised nutrition insights based on the goals, preferences, and dietary information you provide. These outputs are created dynamically and are intended for general informational and planning purposes only.</p>
+        <p data-i18n-html="terms.s3P2"><strong>Not medical or dietary advice.</strong> Nothing generated by Mål — including AI-produced meal plans, recipes, calorie targets, or nutritional breakdowns — constitutes medical advice, diagnosis, or treatment. If you have a health condition, including but not limited to diabetes, cardiovascular disease, eating disorders, kidney disease, pregnancy, or food allergies, consult a qualified healthcare professional before following any recommendation produced by the app.</p>
+        <p data-i18n-html="terms.s3P3"><strong>Accuracy and limitations.</strong> AI-generated content may be incorrect, incomplete, or contextually inappropriate. Nutritional figures in particular may not reflect your specific ingredients, brands, cooking methods, or portion sizes. Do not rely on AI outputs as the sole basis for any health or clinical decision.</p>
+        <p data-i18n-html="terms.s3P4"><strong>Third-party AI processing.</strong> To generate meal plans and recipes, the dietary preferences and goals you enter are processed by a third-party AI provider. This data is anonymised before transmission — no personally identifiable information is shared with AI providers. See the Privacy Policy for full details.</p>
+        <p data-i18n-html="terms.s3P5"><strong>Your responsibility.</strong> You are responsible for the accuracy of the information you supply to Mål. The app is not liable for outputs generated from incomplete, inaccurate, or misleading data you provide.</p>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">04</span><h2 class="jar-title">Subscription &amp; Payment</h2></div>
+      <div class="jar-label"><span class="jar-number">04</span><h2 class="jar-title" data-i18n="terms.s4Title">Subscription &amp; Payment</h2></div>
       <div class="jar-body">
-        <p><strong>Free tier:</strong> includes 5 AI meal generations per calendar month. Credits reset on the 1st of each month and do not carry over.</p>
-        <p><strong>Premium tier:</strong> offers unlimited AI meal generations, advanced insights, and AI coaching. Subscriptions are managed via RevenueCat and renew automatically unless cancelled before the renewal date.</p>
-        <p>Payment card details are handled directly by the App Store or Google Play — we never store them on our servers. Refunds are subject to the relevant app store's policy.</p>
+        <p data-i18n-html="terms.s4P1"><strong>Free tier:</strong> includes 5 AI meal generations per calendar month. Credits reset on the 1st of each month and do not carry over.</p>
+        <p data-i18n-html="terms.s4P2"><strong>Premium tier:</strong> offers unlimited AI meal generations, advanced insights, and AI coaching. Subscriptions are managed via RevenueCat and renew automatically unless cancelled before the renewal date.</p>
+        <p data-i18n="terms.s4P3">Payment card details are handled directly by the App Store or Google Play — we never store them on our servers. Refunds are subject to the relevant app store's policy.</p>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">05</span><h2 class="jar-title">Sharing Features</h2></div>
+      <div class="jar-label"><span class="jar-number">05</span><h2 class="jar-title" data-i18n="terms.s5Title">Sharing Features</h2></div>
       <div class="jar-body">
-        <p>Mål lets you share shopping lists and recipes with other users. Sharing is entirely opt-in — recipients must accept before receiving your content, and you can revoke access at any time.</p>
-        <p>Shared content may include your display name and profile image. Do not share sensitive personal information through this feature. We are not responsible for disputes between users regarding shared content.</p>
+        <p data-i18n="terms.s5P1">Mål lets you share shopping lists and recipes with other users. Sharing is entirely opt-in — recipients must accept before receiving your content, and you can revoke access at any time.</p>
+        <p data-i18n="terms.s5P2">Shared content may include your display name and profile image. Do not share sensitive personal information through this feature. We are not responsible for disputes between users regarding shared content.</p>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">06</span><h2 class="jar-title">Intellectual Property</h2></div>
+      <div class="jar-label"><span class="jar-number">06</span><h2 class="jar-title" data-i18n="terms.s6Title">Intellectual Property</h2></div>
       <div class="jar-body">
-        <p>Mål, its logo, and all original content are owned by Mål or its licensors. You may not use our trademarks or branding without our prior written consent.</p>
-        <p>Content you create — your recipes, notes, and meal data — remains yours. By using Mål you grant us a limited licence to process that content in order to provide the service. By sending us feedback or suggestions you grant us the right to use them without restriction or compensation.</p>
+        <p data-i18n="terms.s6P1">Mål, its logo, and all original content are owned by Mål or its licensors. You may not use our trademarks or branding without our prior written consent.</p>
+        <p data-i18n="terms.s6P2">Content you create — your recipes, notes, and meal data — remains yours. By using Mål you grant us a limited licence to process that content in order to provide the service. By sending us feedback or suggestions you grant us the right to use them without restriction or compensation.</p>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">07</span><h2 class="jar-title">Limitation of Liability</h2></div>
+      <div class="jar-label"><span class="jar-number">07</span><h2 class="jar-title" data-i18n="terms.s7Title">Limitation of Liability</h2></div>
       <div class="jar-body">
-        <p>Mål is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis. To the maximum extent permitted by law, we are not liable for:</p>
+        <p data-i18n-html="terms.s7P1">Mål is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis. To the maximum extent permitted by law, we are not liable for:</p>
         <ul>
-          <li>Indirect, incidental, special, or consequential damages.</li>
-          <li>Loss of data, revenue, or business opportunities.</li>
-          <li>Interruption or unavailability of the app.</li>
-          <li>Errors or inaccuracies in nutritional information.</li>
-          <li>Third-party service outages (Supabase, RevenueCat, Google Gemini API).</li>
+          <li data-i18n="terms.s7Li1">Indirect, incidental, special, or consequential damages.</li>
+          <li data-i18n="terms.s7Li2">Loss of data, revenue, or business opportunities.</li>
+          <li data-i18n="terms.s7Li3">Interruption or unavailability of the app.</li>
+          <li data-i18n="terms.s7Li4">Errors or inaccuracies in nutritional information.</li>
+          <li data-i18n="terms.s7Li5">Third-party service outages (Supabase, RevenueCat, Google Gemini API).</li>
         </ul>
-        <p>Where liability cannot be excluded by law, our total liability is limited to the amount you paid for your subscription in the preceding 12 months (or €0 if you are on the free tier).</p>
+        <p data-i18n="terms.s7P2">Where liability cannot be excluded by law, our total liability is limited to the amount you paid for your subscription in the preceding 12 months (or €0 if you are on the free tier).</p>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">08</span><h2 class="jar-title">Governing Law &amp; Contact</h2></div>
+      <div class="jar-label"><span class="jar-number">08</span><h2 class="jar-title" data-i18n="terms.s8Title">Governing Law &amp; Contact</h2></div>
       <div class="jar-body">
-        <p>These Terms &amp; Conditions are governed by the laws of the Hellenic Republic (Greece). Any disputes shall be resolved in the courts of Greece.</p>
-        <p>We may update these terms at any time. Changes will be posted in the app with a new "Last updated" date. Continued use of Mål after changes are posted means you accept the revised terms.</p>
+        <p data-i18n="terms.s8P1">These Terms &amp; Conditions are governed by the laws of the Hellenic Republic (Greece). Any disputes shall be resolved in the courts of Greece.</p>
+        <p data-i18n="terms.s8P2">We may update these terms at any time. Changes will be posted in the app with a new "Last updated" date. Continued use of Mål after changes are posted means you accept the revised terms.</p>
         <div class="contact-card">
-          Questions about these terms? Reach us at <a href="mailto:info@pantryapp.com" data-contact-email>info@pantryapp.com</a> — we aim to respond within 30 days.
+          <span data-i18n="terms.contactPre">Questions about these terms? Reach us at</span> <a href="mailto:info@pantryapp.com" data-contact-email>info@pantryapp.com</a> <span data-i18n="terms.contactPost">— we aim to respond within 30 days.</span>
         </div>
       </div>
     </section>
@@ -507,96 +522,96 @@
 <section class="view" data-view="privacy" aria-labelledby="privacy-h1" hidden>
 
   <div class="doc-hero">
-    <p class="eyebrow">Legal · Data &amp; Privacy</p>
-    <h1 class="doc-title" id="privacy-h1">Privacy Policy</h1>
-    <p class="doc-sub">How Mål collects, uses, and protects your information — written plainly so you always know what's on the shelf.</p>
-    <span class="pill">Last updated 20 February 2025</span>
+    <p class="eyebrow" data-i18n="privacy.eyebrow">Legal · Data &amp; Privacy</p>
+    <h1 class="doc-title" id="privacy-h1" data-i18n="privacy.title">Privacy Policy</h1>
+    <p class="doc-sub" data-i18n="privacy.sub">How Mål collects, uses, and protects your information — written plainly so you always know what's on the shelf.</p>
+    <span class="pill" data-i18n="privacy.lastUpdated">Last updated 20 February 2025</span>
   </div>
 
   <div class="doc">
 
-    <div class="intro-card">
+    <div class="intro-card" data-i18n="privacy.intro">
       Welcome to Mål! Your privacy is important to us. This policy explains how we collect, use, disclose, and protect your personal information when you use our app. By using Mål, you agree to the practices described below.
     </div>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">01</span><h2 class="jar-title">Information We Collect</h2></div>
+      <div class="jar-label"><span class="jar-number">01</span><h2 class="jar-title" data-i18n="privacy.s1Title">Information We Collect</h2></div>
       <div class="jar-body">
-        <p>We collect the following types of information:</p>
+        <p data-i18n="privacy.s1P1">We collect the following types of information:</p>
         <ul>
-          <li><strong>Personal information</strong> — when you create an account, we may collect your name, email address, and other necessary details.</li>
-          <li><strong>Nutrition &amp; health data</strong> — if you log meals or receive dietary recommendations, we may collect data related to your preferences, goals, and health.</li>
-          <li><strong>Pantry data</strong> — information about the food items you store in your virtual pantry, including expiry dates.</li>
-          <li><strong>Usage information</strong> — data on how you interact with the app, such as features used and time spent.</li>
-          <li><strong>Device information</strong> — data related to your device, operating system, and IP address, for security and optimization.</li>
+          <li data-i18n-html="privacy.s1Li1"><strong>Personal information</strong> — when you create an account, we may collect your name, email address, and other necessary details.</li>
+          <li data-i18n-html="privacy.s1Li2"><strong>Nutrition &amp; health data</strong> — if you log meals or receive dietary recommendations, we may collect data related to your preferences, goals, and health.</li>
+          <li data-i18n-html="privacy.s1Li3"><strong>Pantry data</strong> — information about the food items you store in your virtual pantry, including expiry dates.</li>
+          <li data-i18n-html="privacy.s1Li4"><strong>Usage information</strong> — data on how you interact with the app, such as features used and time spent.</li>
+          <li data-i18n-html="privacy.s1Li5"><strong>Device information</strong> — data related to your device, operating system, and IP address, for security and optimization.</li>
         </ul>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">02</span><h2 class="jar-title">How We Use Your Information</h2></div>
+      <div class="jar-label"><span class="jar-number">02</span><h2 class="jar-title" data-i18n="privacy.s2Title">How We Use Your Information</h2></div>
       <div class="jar-body">
-        <p>We use your information to:</p>
+        <p data-i18n="privacy.s2P1">We use your information to:</p>
         <ul>
-          <li>Provide and improve Mål's features, including AI-powered meal planning and dietary recommendations.</li>
-          <li>Offer personalized nutrition insights and pantry management.</li>
-          <li>Connect you with real-life nutritionists, if applicable.</li>
-          <li>Enhance user experience and troubleshoot technical issues.</li>
-          <li>Comply with legal obligations.</li>
+          <li data-i18n="privacy.s2Li1">Provide and improve Mål's features, including AI-powered meal planning and dietary recommendations.</li>
+          <li data-i18n="privacy.s2Li2">Offer personalized nutrition insights and pantry management.</li>
+          <li data-i18n="privacy.s2Li3">Connect you with real-life nutritionists, if applicable.</li>
+          <li data-i18n="privacy.s2Li4">Enhance user experience and troubleshoot technical issues.</li>
+          <li data-i18n="privacy.s2Li5">Comply with legal obligations.</li>
         </ul>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">03</span><h2 class="jar-title">Sharing Your Information</h2></div>
+      <div class="jar-label"><span class="jar-number">03</span><h2 class="jar-title" data-i18n="privacy.s3Title">Sharing Your Information</h2></div>
       <div class="jar-body">
-        <p>We do not sell your personal data. However, we may share it with:</p>
+        <p data-i18n="privacy.s3P1">We do not sell your personal data. However, we may share it with:</p>
         <ul>
-          <li><strong>AI service providers</strong> — when you request a meal plan or recipe, your dietary preferences and goals are processed by a third-party AI service to generate the response. This data is anonymised before transmission; your name, email address, and account details are never sent to AI providers.</li>
-          <li><strong>Nutritionists &amp; experts</strong> — if you opt for professional consultations.</li>
-          <li><strong>Third-party service providers</strong> — to facilitate app functionalities including authentication, data storage, push notifications, and analytics.</li>
-          <li><strong>Legal authorities</strong> — when required by law or to protect against fraudulent activity.</li>
+          <li data-i18n-html="privacy.s3Li1"><strong>AI service providers</strong> — when you request a meal plan or recipe, your dietary preferences and goals are processed by a third-party AI service to generate the response. This data is anonymised before transmission; your name, email address, and account details are never sent to AI providers.</li>
+          <li data-i18n-html="privacy.s3Li2"><strong>Nutritionists &amp; experts</strong> — if you opt for professional consultations.</li>
+          <li data-i18n-html="privacy.s3Li3"><strong>Third-party service providers</strong> — to facilitate app functionalities including authentication, data storage, push notifications, and analytics.</li>
+          <li data-i18n-html="privacy.s3Li4"><strong>Legal authorities</strong> — when required by law or to protect against fraudulent activity.</li>
         </ul>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">04</span><h2 class="jar-title">Data Security</h2></div>
+      <div class="jar-label"><span class="jar-number">04</span><h2 class="jar-title" data-i18n="privacy.s4Title">Data Security</h2></div>
       <div class="jar-body">
-        <p>We take reasonable measures to protect your data from unauthorized access, loss, or misuse. However, no digital system is completely secure.</p>
+        <p data-i18n="privacy.s4P1">We take reasonable measures to protect your data from unauthorized access, loss, or misuse. However, no digital system is completely secure.</p>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">05</span><h2 class="jar-title">Your Rights &amp; Choices</h2></div>
+      <div class="jar-label"><span class="jar-number">05</span><h2 class="jar-title" data-i18n="privacy.s5Title">Your Rights &amp; Choices</h2></div>
       <div class="jar-body">
-        <p>You can:</p>
+        <p data-i18n="privacy.s5P1">You can:</p>
         <ul>
-          <li>Access, update, or delete your personal data.</li>
-          <li>Opt out of certain data collection practices.</li>
+          <li data-i18n="privacy.s5Li1">Access, update, or delete your personal data.</li>
+          <li data-i18n="privacy.s5Li2">Opt out of certain data collection practices.</li>
         </ul>
         <div class="contact-card">
-          Questions or requests about your data? Reach us at <a href="mailto:info@pantryapp.com" data-contact-email>info@pantryapp.com</a>
+          <span data-i18n="privacy.s5ContactPre">Questions or requests about your data? Reach us at</span> <a href="mailto:info@pantryapp.com" data-contact-email>info@pantryapp.com</a>
         </div>
       </div>
     </section>
 
     <section class="jar reveal" id="delete-account">
-      <div class="jar-label"><span class="jar-number">06</span><h2 class="jar-title">Request Account Deletion</h2></div>
+      <div class="jar-label"><span class="jar-number">06</span><h2 class="jar-title" data-i18n="privacy.s6Title">Request Account Deletion</h2></div>
       <div class="jar-body">
-        <p>You can request the deletion of your Mål account and associated personal data at any time. Once we receive your request, we will delete your account information, including your profile details, pantry contents, and nutrition data, within 30 days, except where we are required to retain certain data for legal or regulatory purposes.</p>
-        <p>To request deletion, send an email with the subject line <strong>"Account Deletion Request"</strong> from the email address associated with your account.</p>
+        <p data-i18n="privacy.s6P1">You can request the deletion of your Mål account and associated personal data at any time. Once we receive your request, we will delete your account information, including your profile details, pantry contents, and nutrition data, within 30 days, except where we are required to retain certain data for legal or regulatory purposes.</p>
+        <p data-i18n-html="privacy.s6P2">To request deletion, send an email with the subject line <strong>"Account Deletion Request"</strong> from the email address associated with your account.</p>
         <div class="contact-card">
-          Request deletion by emailing <a href="mailto:info@pantryapp.com?subject=Account%20Deletion%20Request" data-contact-email>info@pantryapp.com</a>
-          <a class="contact-more" href="#/delete" data-link="delete">See the full deletion steps →</a>
+          <span data-i18n="privacy.s6ContactPre">Request deletion by emailing</span> <a href="mailto:info@pantryapp.com?subject=Account%20Deletion%20Request" data-contact-email>info@pantryapp.com</a>
+          <a class="contact-more" href="#/delete" data-link="delete" data-i18n="privacy.s6DeletionLink">See the full deletion steps →</a>
         </div>
       </div>
     </section>
 
     <section class="jar reveal">
-      <div class="jar-label"><span class="jar-number">07</span><h2 class="jar-title">Changes to This Policy</h2></div>
+      <div class="jar-label"><span class="jar-number">07</span><h2 class="jar-title" data-i18n="privacy.s7Title">Changes to This Policy</h2></div>
       <div class="jar-body">
-        <p>We may update this Privacy Policy from time to time. Any changes will be posted in the app, and continued use of Mål means you accept the revised policy.</p>
+        <p data-i18n="privacy.s7P1">We may update this Privacy Policy from time to time. Any changes will be posted in the app, and continued use of Mål means you accept the revised policy.</p>
       </div>
     </section>
 
@@ -608,9 +623,9 @@
 <section class="view" data-view="delete" aria-labelledby="delete-h1" hidden>
 
   <div class="doc-hero">
-    <p class="eyebrow">Your data · Your call</p>
-    <h1 class="doc-title" id="delete-h1">Delete your account</h1>
-    <p class="doc-sub">You can ask us to erase your Mål account and everything attached to it. Here's exactly how, and exactly what happens next.</p>
+    <p class="eyebrow" data-i18n="delete.eyebrow">Your data · Your call</p>
+    <h1 class="doc-title" id="delete-h1" data-i18n="delete.title">Delete your account</h1>
+    <p class="doc-sub" data-i18n="delete.sub">You can ask us to erase your Mål account and everything attached to it. Here's exactly how, and exactly what happens next.</p>
   </div>
 
   <div class="doc">
@@ -619,55 +634,55 @@
       <li class="step reveal">
         <span class="step-n">1</span>
         <div>
-          <h3>Email us from your account address</h3>
-          <p>Send the request from the same email address you signed up with — that's how we confirm the account is yours.</p>
+          <h3 data-i18n="delete.step1Title">Email us from your account address</h3>
+          <p data-i18n="delete.step1Body">Send the request from the same email address you signed up with — that's how we confirm the account is yours.</p>
         </div>
       </li>
       <li class="step reveal">
         <span class="step-n">2</span>
         <div>
-          <h3>Use the subject line "Account Deletion Request"</h3>
-          <p>It routes your message straight to the right place, so nothing sits in a queue.</p>
+          <h3 data-i18n="delete.step2Title">Use the subject line "Account Deletion Request"</h3>
+          <p data-i18n="delete.step2Body">It routes your message straight to the right place, so nothing sits in a queue.</p>
         </div>
       </li>
       <li class="step reveal">
         <span class="step-n">3</span>
         <div>
-          <h3>We erase it within 30 days</h3>
-          <p>Your profile details, pantry contents and nutrition data are removed — except anything we're legally required to keep.</p>
+          <h3 data-i18n="delete.step3Title">We erase it within 30 days</h3>
+          <p data-i18n="delete.step3Body">Your profile details, pantry contents and nutrition data are removed — except anything we're legally required to keep.</p>
         </div>
       </li>
     </ol>
 
     <div class="cta-card reveal">
       <div>
-        <strong>Ready when you are</strong>
-        <p>This opens your mail app with the subject already filled in.</p>
+        <strong data-i18n="delete.ctaTitle">Ready when you are</strong>
+        <p data-i18n="delete.ctaBody">This opens your mail app with the subject already filled in.</p>
       </div>
-      <a class="btn btn-primary" href="mailto:info@pantryapp.com?subject=Account%20Deletion%20Request" data-contact-email>Email deletion request</a>
+      <a class="btn btn-primary" href="mailto:info@pantryapp.com?subject=Account%20Deletion%20Request" data-contact-email data-i18n="delete.ctaButton">Email deletion request</a>
     </div>
 
     <div class="what-goes">
       <div class="goes-col reveal">
-        <h3><span class="goes-ico del">✕</span> What gets deleted</h3>
+        <h3><span class="goes-ico del">✕</span> <span data-i18n="delete.goesTitle">What gets deleted</span></h3>
         <ul>
-          <li>Your profile details</li>
-          <li>Your pantry contents</li>
-          <li>Your nutrition and goal data</li>
-          <li>Your meal plans and history</li>
+          <li data-i18n="delete.goes1">Your profile details</li>
+          <li data-i18n="delete.goes2">Your pantry contents</li>
+          <li data-i18n="delete.goes3">Your nutrition and goal data</li>
+          <li data-i18n="delete.goes4">Your meal plans and history</li>
         </ul>
       </div>
       <div class="goes-col reveal">
-        <h3><span class="goes-ico keep">!</span> What we may keep</h3>
+        <h3><span class="goes-ico keep">!</span> <span data-i18n="delete.keepsTitle">What we may keep</span></h3>
         <ul>
-          <li>Records we're required to retain for legal or regulatory purposes</li>
+          <li data-i18n="delete.keeps1">Records we're required to retain for legal or regulatory purposes</li>
         </ul>
-        <p class="goes-note">Everything else goes, within 30 days of your request.</p>
+        <p class="goes-note" data-i18n="delete.goesNote">Everything else goes, within 30 days of your request.</p>
       </div>
     </div>
 
     <p class="doc-foot-link">
-      This mirrors <a href="#/privacy" data-link="privacy">section 06 of our privacy policy</a>.
+      <span data-i18n="delete.footPre">This mirrors</span> <a href="#/privacy" data-link="privacy" data-i18n="delete.footLink">section 06 of our privacy policy</a>.
     </p>
 
   </div>
@@ -678,9 +693,9 @@
 <section class="view" data-view="releases" aria-labelledby="releases-h1" hidden>
 
   <div class="doc-hero">
-    <p class="eyebrow">Updates · What changed</p>
-    <h1 class="doc-title" id="releases-h1">Release Notes</h1>
-    <p class="doc-sub">Every update to Mål, explained plainly — what changed and why it matters.</p>
+    <p class="eyebrow" data-i18n="releases.eyebrow">Updates · What changed</p>
+    <h1 class="doc-title" id="releases-h1" data-i18n="releases.title">Release Notes</h1>
+    <p class="doc-sub" data-i18n="releases.sub">Every update to Mål, explained plainly — what changed and why it matters.</p>
   </div>
 
   <div class="doc">
@@ -691,45 +706,45 @@
         <div class="rn-stamp">
           <span class="rn-date">Aug 28, 2026</span>
           <span class="rn-badge">v0.5.2 · Build 42</span>
-          <span class="rn-badge rn-badge--drop">Health Export</span>
+          <span class="rn-badge rn-badge--drop" data-i18n="releases.r1DropName">Health Export</span>
         </div>
-        <h2 class="rn-headline">Your data, your doctor.</h2>
-        <p class="rn-blurb">Export your calorie log, macros, and weight history as a branded PDF or CSV — ready to share with your care team.</p>
+        <h2 class="rn-headline" data-i18n="releases.r1Headline">Your data, your doctor.</h2>
+        <p class="rn-blurb" data-i18n="releases.r1Blurb">Export your calorie log, macros, and weight history as a branded PDF or CSV — ready to share with your care team.</p>
       </div>
       <div class="rn-items">
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">📤</div>
           <div class="rn-body">
-            <div class="rn-item-label">Export your health data</div>
-            <div class="rn-item-desc">A new "Take your data further" card on the dashboard opens an export modal. Pick 7, 15, or 30 days, choose CSV or PDF, and share via the native share sheet.</div>
+            <div class="rn-item-label" data-i18n="releases.r1Item1Label">Export your health data</div>
+            <div class="rn-item-desc" data-i18n-html="releases.r1Item1Desc">A new "Take your data further" card on the dashboard opens an export modal. Pick 7, 15, or 30 days, choose CSV or PDF, and share via the native share sheet.</div>
           </div>
         </div>
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🎯</div>
           <div class="rn-body">
-            <div class="rn-item-label">Honest macro numbers</div>
-            <div class="rn-item-desc">Macros reflect only what you actually ate. Instant-mode users see logged day totals; meal-plan users see per-meal sums from marked meals only.</div>
+            <div class="rn-item-label" data-i18n="releases.r1Item2Label">Honest macro numbers</div>
+            <div class="rn-item-desc" data-i18n="releases.r1Item2Desc">Macros reflect only what you actually ate. Instant-mode users see logged day totals; meal-plan users see per-meal sums from marked meals only.</div>
           </div>
         </div>
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">📄</div>
           <div class="rn-body">
-            <div class="rn-item-label">Branded PDF report</div>
-            <div class="rn-item-desc">The PDF shows a profile card, three stat cards (avg kcal, adherence, weight change), a colour-coded calorie bar per day, and weight history — all rendered in your app language.</div>
+            <div class="rn-item-label" data-i18n="releases.r1Item3Label">Branded PDF report</div>
+            <div class="rn-item-desc" data-i18n="releases.r1Item3Desc">The PDF shows a profile card, three stat cards (avg kcal, adherence, weight change), a colour-coded calorie bar per day, and weight history — all rendered in your app language.</div>
           </div>
         </div>
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🌍</div>
           <div class="rn-body">
-            <div class="rn-item-label">Fully localised export</div>
-            <div class="rn-item-desc">Every label in the CSV and PDF is translated into all six supported languages: English, German, Greek, Spanish, Italian, and Polish.</div>
+            <div class="rn-item-label" data-i18n="releases.r1Item4Label">Fully localised export</div>
+            <div class="rn-item-desc" data-i18n="releases.r1Item4Desc">Every label in the CSV and PDF is translated into all six supported languages: English, German, Greek, Spanish, Italian, and Polish.</div>
           </div>
         </div>
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🎨</div>
           <div class="rn-body">
-            <div class="rn-item-label">Consistent button styling</div>
-            <div class="rn-item-desc">The export card, in-modal export button, and Settings logout button now share the same dark forest-green gradient for a cohesive feel.</div>
+            <div class="rn-item-label" data-i18n="releases.r1Item5Label">Consistent button styling</div>
+            <div class="rn-item-desc" data-i18n="releases.r1Item5Desc">The export card, in-modal export button, and Settings logout button now share the same dark forest-green gradient for a cohesive feel.</div>
           </div>
         </div>
       </div>
@@ -741,10 +756,10 @@
         <div class="rn-stamp">
           <span class="rn-date">Aug 27, 2026</span>
           <span class="rn-badge">v0.5.1 · Build 41</span>
-          <span class="rn-badge rn-badge--drop">Welcome Drop</span>
+          <span class="rn-badge rn-badge--drop" data-i18n="releases.r2DropName">Welcome Drop</span>
         </div>
-        <h2 class="rn-headline">First impressions, fixed.</h2>
-        <p class="rn-blurb">A proper welcome for new users, a streak that actually starts at 1, and a profile redirect that finally works. 🙌</p>
+        <h2 class="rn-headline" data-i18n="releases.r2Headline">First impressions, fixed.</h2>
+        <p class="rn-blurb" data-i18n="releases.r2Blurb">A proper welcome for new users, a streak that actually starts at 1, and a profile redirect that finally works. 🙌</p>
       </div>
 
       <div class="rn-items">
@@ -752,40 +767,40 @@
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">👋</div>
           <div class="rn-body">
-            <div class="rn-item-label">Onboarding guide</div>
-            <div class="rn-item-desc">New users get a 5-step interactive welcome tour — with real in-app screenshots showing exactly where to tap for meals, the planner, AI generation, streaks, and reminders.</div>
+            <div class="rn-item-label" data-i18n="releases.r2Item1Label">Onboarding guide</div>
+            <div class="rn-item-desc" data-i18n="releases.r2Item1Desc">New users get a 5-step interactive welcome tour — with real in-app screenshots showing exactly where to tap for meals, the planner, AI generation, streaks, and reminders.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🔥</div>
           <div class="rn-body">
-            <div class="rn-item-label">Streaks start at 1</div>
-            <div class="rn-item-desc">New accounts no longer show 0 as a streak. Day one is always Day 1.</div>
+            <div class="rn-item-label" data-i18n="releases.r2Item2Label">Streaks start at 1</div>
+            <div class="rn-item-desc" data-i18n="releases.r2Item2Desc">New accounts no longer show 0 as a streak. Day one is always Day 1.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">📅</div>
           <div class="rn-body">
-            <div class="rn-item-label">Annual subscription plan</div>
-            <div class="rn-item-desc">A yearly plan is now available alongside the monthly and lifetime options — same premium features, better value.</div>
+            <div class="rn-item-label" data-i18n="releases.r2Item3Label">Annual subscription plan</div>
+            <div class="rn-item-desc" data-i18n="releases.r2Item3Desc">A yearly plan is now available alongside the monthly and lifetime options — same premium features, better value.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🛠</div>
           <div class="rn-body">
-            <div class="rn-item-label">Profile redirect on setup complete <span class="rn-bug">Fix</span></div>
-            <div class="rn-item-desc">Tapping Complete in preference setup now reliably lands you on your profile every time. No more blank tab bars or silent failures.</div>
+            <div class="rn-item-label" data-i18n-html="releases.r2Item4Label">Profile redirect on setup complete <span class="rn-bug">Fix</span></div>
+            <div class="rn-item-desc" data-i18n="releases.r2Item4Desc">Tapping Complete in preference setup now reliably lands you on your profile every time. No more blank tab bars or silent failures.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">📸</div>
           <div class="rn-body">
-            <div class="rn-item-label">Onboarding images: 85% lighter</div>
-            <div class="rn-item-desc">In-app screenshots converted from PNG to WebP — 1 MB trimmed to 147 KB. Same clarity, fraction of the weight.</div>
+            <div class="rn-item-label" data-i18n="releases.r2Item5Label">Onboarding images: 85% lighter</div>
+            <div class="rn-item-desc" data-i18n="releases.r2Item5Desc">In-app screenshots converted from PNG to WebP — 1 MB trimmed to 147 KB. Same clarity, fraction of the weight.</div>
           </div>
         </div>
 
@@ -799,10 +814,10 @@
         <div class="rn-stamp">
           <span class="rn-date">Aug 26, 2026</span>
           <span class="rn-badge">v0.5.0 · Build 40</span>
-          <span class="rn-badge rn-badge--drop">Freshness Drop</span>
+          <span class="rn-badge rn-badge--drop" data-i18n="releases.r3DropName">Freshness Drop</span>
         </div>
-        <h2 class="rn-headline">The grid finally shows up.</h2>
-        <p class="rn-blurb">A bag of fixes, icon surgery, and some serious modal glow-ups. ✌️</p>
+        <h2 class="rn-headline" data-i18n="releases.r3Headline">The grid finally shows up.</h2>
+        <p class="rn-blurb" data-i18n="releases.r3Blurb">A bag of fixes, icon surgery, and some serious modal glow-ups. ✌️</p>
       </div>
 
       <div class="rn-items">
@@ -810,72 +825,72 @@
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">📦</div>
           <div class="rn-body">
-            <div class="rn-item-label">Icons went on a diet</div>
-            <div class="rn-item-desc">9 food images trimmed from <strong>19.6 MB → 49 KB</strong>. Same vibes, 99.75% lighter. Figma exports, we love to hate you.</div>
+            <div class="rn-item-label" data-i18n="releases.r3Item1Label">Icons went on a diet</div>
+            <div class="rn-item-desc" data-i18n-html="releases.r3Item1Desc">9 food images trimmed from <strong>19.6 MB → 49 KB</strong>. Same vibes, 99.75% lighter. Figma exports, we love to hate you.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">📐</div>
           <div class="rn-body">
-            <div class="rn-item-label">Dashboard meal icons: 44 px, no negotiating</div>
-            <div class="rn-item-desc">They were ballooning after the WebP switch. Pinned them at a crisp 44 × 44 px. Your eyes are welcome.</div>
+            <div class="rn-item-label" data-i18n="releases.r3Item2Label">Dashboard meal icons: 44 px, no negotiating</div>
+            <div class="rn-item-desc" data-i18n="releases.r3Item2Desc">They were ballooning after the WebP switch. Pinned them at a crisp 44 × 44 px. Your eyes are welcome.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🗂️</div>
           <div class="rn-body">
-            <div class="rn-item-label">Pantry card gets its shelves back</div>
-            <div class="rn-item-desc">The old sourced icon is out. A clean CSS-drawn three-shelf icon is in — lighter, consistent, and actually on-brand.</div>
+            <div class="rn-item-label" data-i18n="releases.r3Item3Label">Pantry card gets its shelves back</div>
+            <div class="rn-item-desc" data-i18n="releases.r3Item3Desc">The old sourced icon is out. A clean CSS-drawn three-shelf icon is in — lighter, consistent, and actually on-brand.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🎀</div>
           <div class="rn-body">
-            <div class="rn-item-label">Expert card: charcoal glow-up</div>
-            <div class="rn-item-desc">Swapped the placeholder for a sleek charcoal-gradient badge with a ribbon icon. Premium feel, zero clutter.</div>
+            <div class="rn-item-label" data-i18n="releases.r3Item4Label">Expert card: charcoal glow-up</div>
+            <div class="rn-item-desc" data-i18n="releases.r3Item4Desc">Swapped the placeholder for a sleek charcoal-gradient badge with a ribbon icon. Premium feel, zero clutter.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🇬🇷</div>
           <div class="rn-body">
-            <div class="rn-item-label">Greek: &#8220;Σερί&#8221; ✓</div>
-            <div class="rn-item-desc">We were saying <em>Σειρά</em> (a row) instead of <em>Σερί</em> (a streak). One letter. Big difference. Fixed.</div>
+            <div class="rn-item-label" data-i18n-html="releases.r3Item5Label">Greek: &#8220;Σερί&#8221; ✓</div>
+            <div class="rn-item-desc" data-i18n-html="releases.r3Item5Desc">We were saying <em>Σειρά</em> (a row) instead of <em>Σερί</em> (a streak). One letter. Big difference. Fixed.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🍽️</div>
           <div class="rn-body">
-            <div class="rn-item-label">Serving callout: less noise, more signal</div>
-            <div class="rn-item-desc">The SeasonPopular serving panel dropped the fork-and-plate emoji. Now it's a minimal left-border info strip — clean, readable, no fuss.</div>
+            <div class="rn-item-label" data-i18n="releases.r3Item6Label">Serving callout: less noise, more signal</div>
+            <div class="rn-item-desc" data-i18n="releases.r3Item6Desc">The SeasonPopular serving panel dropped the fork-and-plate emoji. Now it's a minimal left-border info strip — clean, readable, no fuss.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🔢</div>
           <div class="rn-body">
-            <div class="rn-item-label">Zero is a valid macro <span class="rn-bug">Fix #425</span></div>
-            <div class="rn-item-desc">Custom meals with any macro at 0 were quietly blocked. Zero is a real number. It counts now.</div>
+            <div class="rn-item-label" data-i18n-html="releases.r3Item7Label">Zero is a valid macro <span class="rn-bug">Fix #425</span></div>
+            <div class="rn-item-desc" data-i18n="releases.r3Item7Desc">Custom meals with any macro at 0 were quietly blocked. Zero is a real number. It counts now.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">🔥</div>
           <div class="rn-body">
-            <div class="rn-item-label">Today&#8217;s Meal Plan: grid view &amp; flame calories <span class="rn-bug">Fix #427</span></div>
-            <div class="rn-item-desc">Tap the top-right icon: all meals snap into a <strong>2 × 2 grid</strong> with macro initials, section labels, and the app&#8217;s flame icon next to each calorie count. Tap again: back to normal.</div>
+            <div class="rn-item-label" data-i18n-html="releases.r3Item8Label">Today&#8217;s Meal Plan: grid view &amp; flame calories <span class="rn-bug">Fix #427</span></div>
+            <div class="rn-item-desc" data-i18n-html="releases.r3Item8Desc">Tap the top-right icon: all meals snap into a <strong>2 × 2 grid</strong> with macro initials, section labels, and the app&#8217;s flame icon next to each calorie count. Tap again: back to normal.</div>
           </div>
         </div>
 
         <div class="rn-item reveal">
           <div class="rn-ico" aria-hidden="true">📋</div>
           <div class="rn-body">
-            <div class="rn-item-label">Meal Plan Overview: no longer all green <span class="rn-bug">Fix #431</span></div>
-            <div class="rn-item-desc">The overview modal matched nothing. Now it matches Today&#8217;s Meal Plan: parchment background, white cards, coloured macro pills, horizontal food scroll, and a proper Apply / Cancel button pair.</div>
+            <div class="rn-item-label" data-i18n-html="releases.r3Item9Label">Meal Plan Overview: no longer all green <span class="rn-bug">Fix #431</span></div>
+            <div class="rn-item-desc" data-i18n-html="releases.r3Item9Desc">The overview modal matched nothing. Now it matches Today&#8217;s Meal Plan: parchment background, white cards, coloured macro pills, horizontal food scroll, and a proper Apply / Cancel button pair.</div>
           </div>
         </div>
 
@@ -894,18 +909,20 @@
   <div class="foot-inner">
     <span class="foot-mark">Mål<span class="wordmark-dot">.</span></span>
     <nav class="foot-nav">
-      <a href="#/" data-link="home">Home</a>
-      <a href="#/terms" data-link="terms">Terms</a>
-      <a href="#/privacy" data-link="privacy">Privacy</a>
-      <a href="#/delete" data-link="delete">Delete account</a>
-      <a href="#/releases" data-link="releases">What&#8217;s new</a>
-      <a href="mailto:info@pantryapp.com" data-contact-email>Contact</a>
+      <a href="#/" data-link="home" data-i18n="nav.home">Home</a>
+      <a href="#/terms" data-link="terms" data-i18n="nav.terms">Terms</a>
+      <a href="#/privacy" data-link="privacy" data-i18n="nav.privacy">Privacy</a>
+      <a href="#/delete" data-link="delete" data-i18n="common.deleteAccount">Delete account</a>
+      <a href="#/releases" data-link="releases" data-i18n-html="nav.releases">What&#8217;s new</a>
+      <a href="mailto:info@pantryapp.com" data-contact-email data-i18n="common.contact">Contact</a>
     </nav>
-    <span class="foot-copy">&copy; <span id="year">2026</span> Mål. All rights reserved.</span>
+    <span class="foot-copy">&copy; <span id="year">2026</span> Mål. <span data-i18n="common.allRightsReserved">All rights reserved.</span></span>
   </div>
 </footer>
 
-<script src="assets/js/app.js?v=0.5.1"></script>
+<script src="assets/js/i18n-data.js?v=0.5.2"></script>
+<script src="assets/js/i18n.js?v=0.5.2"></script>
+<script src="assets/js/app.js?v=0.5.2"></script>
 </body>
 </html>
 

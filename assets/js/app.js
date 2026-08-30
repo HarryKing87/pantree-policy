@@ -92,6 +92,7 @@
       next.style.animation = '';
 
       current = name;
+      window.MAL_currentView = name;
       document.title = titleFor(name);
       armReveals(next);
 
@@ -112,6 +113,9 @@
   }
 
   function titleFor(name) {
+    /* i18n.js (loaded first) exposes a language-aware version of this
+       same mapping; fall back to the English strings if it isn't ready. */
+    if (window.MAL_titleFor) return window.MAL_titleFor(name);
     if (name === 'terms')    return 'Terms & Conditions — Mål';
     if (name === 'privacy')  return 'Privacy Policy — Mål';
     if (name === 'delete')   return 'Delete your account — Mål';
