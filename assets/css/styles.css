@@ -386,6 +386,16 @@ a { color: var(--accent); }
 }
 .btn-ghost:hover { border-color: var(--accent-line); color: var(--accent-ink); background: var(--surface-2); }
 
+/* locked / not-yet-available CTA — same muted treatment as .store-badge--ios */
+.btn.is-locked {
+  opacity: .55;
+  pointer-events: none;
+  cursor: default;
+  box-shadow: none;
+}
+.btn.is-locked:hover,
+.btn.is-locked:active { transform: none; box-shadow: none; }
+
 /* ─── animated leaf ─── */
 .hero-leaf { display: grid; place-items: center; }
 .leafmark { width: min(100%, 380px); height: auto; overflow: visible; }
