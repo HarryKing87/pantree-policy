@@ -210,6 +210,15 @@ a { color: var(--accent); }
 }
 .tab-pill.no-anim { transition: none; }
 
+/* groups the language switcher and theme toggle so they always move
+   and wrap together as a single unit, never splitting apart */
+.topbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 /* theme toggle */
 .theme-toggle {
   flex-shrink: 0;
@@ -295,7 +304,7 @@ a { color: var(--accent); }
 .lang-menu li.is-active { color: var(--accent-ink); font-weight: 700; background: var(--accent-soft); }
 
 @media (max-width: 760px) {
-  .lang-switch { margin-left: auto; }
+  .topbar-controls { margin-left: auto; }
   .lang-toggle { padding: 0 10px 0 8px; }
   .lang-code { display: none; }
 }
@@ -827,7 +836,6 @@ a { color: var(--accent); }
   .topbar-inner { flex-wrap: wrap; padding: 11px 18px; gap: 12px; }
   .tabs { order: 3; width: 100%; margin-left: 0; justify-content: space-between; }
   .tab { flex: 1; text-align: center; padding: 8px 10px; font-size: .8rem; }
-  .theme-toggle { margin-left: auto; }
   .jar-body { padding-left: 0; margin-top: 8px; }
   .jar-label { flex-wrap: wrap; }
   .foot-inner { flex-direction: column; text-align: center; }
