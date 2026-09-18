@@ -267,4 +267,26 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
+  /* countdown timer to launch */
+  function updateCountdown() {
+    var countdownEl = document.getElementById('countdown-days');
+    if (!countdownEl) return;
+
+    var launchDate = new Date('2026-09-30T23:59:59').getTime();
+    var now = new Date().getTime();
+    var remaining = launchDate - now;
+
+    if (remaining <= 0) {
+      countdownEl.textContent = 'Available now';
+      return;
+    }
+
+    var days = Math.ceil(remaining / (1000 * 60 * 60 * 24));
+    var plural = days === 1 ? 'day' : 'days';
+    countdownEl.textContent = days + ' ' + plural;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 3600000);
+
 })();

@@ -1194,3 +1194,47 @@ a { color: var(--accent); }
 @media (max-width: 480px) {
   .what-goes { grid-template-columns: 1fr; gap: 12px; }
 }
+
+/* ── Countdown timer ── */
+.countdown-timer {
+  margin: 28px 0 16px;
+  text-align: center;
+}
+
+.countdown-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.countdown-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.countdown-days {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #55B884 0%, #9AC540 52%, #E0963B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 640px) {
+  .countdown-timer { margin: 24px 0 12px; }
+  .countdown-days { font-size: 1.8rem; }
+  .countdown-date { font-size: 1rem; }
+}
