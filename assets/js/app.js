@@ -267,26 +267,53 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  /* countdown timer to launch */
+  /* animated countdown timer to launch */
   function updateCountdown() {
-    var countdownEl = document.getElementById('countdown-days');
-    if (!countdownEl) return;
+    var daysEl = document.getElementById('countdown-days');
+    var hoursEl = document.getElementById('countdown-hours');
+    var minutesEl = document.getElementById('countdown-minutes');
+
+    if (!daysEl || !hoursEl || !minutesEl) return;
 
     var launchDate = new Date('2026-09-30T23:59:59').getTime();
     var now = new Date().getTime();
     var remaining = launchDate - now;
 
     if (remaining <= 0) {
-      countdownEl.textContent = 'Available now';
+      daysEl.textContent = '00';
+      hoursEl.textContent = '00';
+      minutesEl.textContent = '00';
       return;
     }
 
-    var days = Math.ceil(remaining / (1000 * 60 * 60 * 24));
-    var plural = days === 1 ? 'day' : 'days';
-    countdownEl.textContent = days + ' ' + plural;
+    var days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+
+    var daysStr = String(days).padStart(2, '0');
+    var hoursStr = String(hours).padStart(2, '0');
+    var minutesStr = String(minutes).padStart(2, '0');
+
+    if (daysEl.textContent !== daysStr) {
+      daysEl.textContent = daysStr;
+      daysEl.classList.add('tick');
+      setTimeout(function() { daysEl.classList.remove('tick'); }, 400);
+    }
+
+    if (hoursEl.textContent !== hoursStr) {
+      hoursEl.textContent = hoursStr;
+      hoursEl.classList.add('tick');
+      setTimeout(function() { hoursEl.classList.remove('tick'); }, 400);
+    }
+
+    if (minutesEl.textContent !== minutesStr) {
+      minutesEl.textContent = minutesStr;
+      minutesEl.classList.add('tick');
+      setTimeout(function() { minutesEl.classList.remove('tick'); }, 400);
+    }
   }
 
   updateCountdown();
-  setInterval(updateCountdown, 3600000);
+  setInterval(updateCountdown, 60000);
 
 })();
