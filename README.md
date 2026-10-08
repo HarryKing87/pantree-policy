@@ -48,5 +48,5 @@ Mål is a personal meal planner for iPhone and Android — built around your goa
 
 <div align="center">
 <br>
-<sub>© 2026 Mål &nbsp;·&nbsp; <a href="https://harryking87.github.io/pantree-policy/#/privacy">Privacy</a> &nbsp;·&nbsp; <a href="mailto:harrykinghsv@gmail.com">Contact</a></sub>
+<sub>© 2026 Mål &nbsp;·&nbsp; <a href="https://harryking87.github.io/pantree-policy/#/privacy">Privacy</a> &nbsp;·&nbsp; <a href="mailto:contact@getmaal.app">Contact</a></sub>
 </div>
